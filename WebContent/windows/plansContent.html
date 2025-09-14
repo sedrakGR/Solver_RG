@@ -1,0 +1,130 @@
+<div id="plansContentMainPanel" class="plansContentMainPanelStyle">
+	<div id="dialogPlace" class="diologPlaceStyle"></div>
+	<div id="plansDisplayPanel" class="plansDisplayPanelStyle">	
+		<div id="goalAddUpdateBlock" class="goalAddUpdateBlock hidden">
+			<form id="goalAddUpdateForm">
+				<fieldset>
+					<legend>
+						<b id="goalFormHead">New goal</b>
+					</legend>
+					<input type="text" name="name" id="goalName" placeholder="Insert goal name">
+					<select id="goalPreCondition" name="preCondition">
+						<option value="">Select precondition</option>
+					</select>
+					<select id="goalPostCondition" name="postCondition">
+						<option value="">Select postcondition</option>
+					</select>
+					<input type="number" name="depth" id="goalDepth" placeholder="Insert depth">
+					<input type="button" value="Add Evaluator" id="addEvalAttrGoal">
+					<div class="evalAttrContainerGoal evalAttrContainerStyleGoal" id="evalAttrContainerGoal"></div>
+					<label> Final <input type="checkbox" name="isGoalFinal" id="goalIsGoalFinal"></label>
+					<button id="SaveButtonGoal" type="button" class="dialogButtons">Save</button>
+					<button id="CancelButtonGoal" type="reset" class="dialogButtons">Cancel</button>
+
+					<div class="evalIndexGoal" style="display: none;">
+							<select id="goalCriteriaType" name="criteriaType">
+										<option value=""></option></select>
+							<input type="number" name="criteriaPriorety" id="goalCriteriaPriorety" placeholder="Insert Priorety">
+							<input type="text" name="criteriaExpression" id="goalCriteriaExpression" placeholder="Insert Expression">
+					</div>
+				</fieldset>
+			</form>
+		</div>
+		<div id="planAddUpdateBlock" class="planAddUpdateBlock hidden">
+			<form id="planAddUpdateForm">
+				<fieldset>
+					<legend>
+						<b id="planFormHead">New plan</b>
+					</legend>
+					<input type="text" name="name" id="planName" placeholder="Insert plan name">
+					
+					<div id="planGoals">
+						<h4>Plan goals</h4>
+						<ul class="sortable">
+							<li class="ui-state-default">
+								<select name="planGoal">
+									<option value="">Select goal</option>
+								</select>
+								<span class="removeGoalFromPlan">x</span>
+							</li>
+						</ul>
+					</div>
+					<span><button id="AddGoal" type="button" class="dialogButtons">Add goal</button></span>					   
+					<button id="SaveButtonPlan" type="button" class="dialogButtons">Save</button>
+					<button id="CancelButtonPlan" type="reset" class="dialogButtons">Cancel</button>
+				</fieldset>
+			</form>
+		</div>
+		<div id="planWrapperAddUpdateBlock" class="planWrapperAddUpdateBlock hidden">
+			<form id="planWrapperAddUpdateForm">
+				<fieldset>
+					<legend>
+						<b id="planWrapperFormHead">New plan wrapper</b>
+					</legend>
+					<input type="text" name="name" id="planWrapperName" placeholder="Insert planWrapper name">
+						<div id="plans">
+						<h4>Plans</h4>
+						<ul class="sortable">
+							<li class="ui-state-default">
+								<select name="plans">
+									<option value="">Select plan</option>
+								</select>
+								<span class="removePlanFromPlanWrapper">x</span>
+							</li>
+						</ul>
+					</div>
+					
+					<select id="planWrapperPreCondition" name="preCondition">
+						<option value="">Select precondition</option>
+					</select>
+					
+					<input type="button" value="Add Evaluator" id="addEvalAttrPlanWrapper">
+					<div class="evalAttrContainerPlanWrapper evalAttrContainerStylePlanWrapper" id="evalAttrContainerPlanWrapper"></div>
+					
+					
+					<button id="SaveButtonPlanWrapper" type="button" class="dialogButtons">Save</button>
+					<button id="CancelButtonPlanWrapper" type="reset" class="dialogButtons">Cancel</button>
+					
+					<div class="evalIndexPlanWrapper" style="display: none;">
+							<select id="planWrapperCriteriaType" name="planWrapperCriteriaType">
+										<option value=""></option></select>
+							<input type="number" name="criteriaPriorety" id="planWrapperCriteriaPriorety" placeholder="Insert Priorety">
+							<input type="text" name="criteriaExpression" id="planWrapperCriteriaExpression" placeholder="Insert Expression">
+					</div>
+				</fieldset>
+			</form>
+		</div>
+	</div>
+	
+	<div id="plansControlPanel" class="plansControlPanelStyle">
+		<div id="plansControlButtonsPanel" class="plansControlButtonsPanelStyle">
+			<input type="button" value="New Goal" id="newGoalBtn" />
+			<span class="separator inline">|</span>
+			<input type="button" value="New Plan" id="newPlanBtn" />
+			<span class="separator inline">|</span>
+			<input type="button" value="New Plan Wrapper" id="newPlanWrapperBtn" />
+		</div>
+	
+		<div id="setAccordionPanel" class="sitAccordionPanelStyle">	
+			<div class="sitAccordionContainer">	
+				<h2 class="setConceptsTreeHeader" id="setConceptsTreeHeader">Goals List</h2>								
+				<div class="conListBody" id="goalsListPanel"></div>
+				
+				<h2 class="setListHeader blue-back" id="actionListHeaderConc">Plans List</h2>
+				<div class="conListBody" id="plansListPanel"></div>
+				
+				<h2 class="setListHeader blue-back" id="actionListHeaderConcForWrapper">PlansWrapper List</h2>
+				<div class="conListBody" id="plansWrapperListPanel"></div>
+			</div>
+		</div>
+	</div>
+	
+</div>
+
+
+<div id="planJson" style="display:none">{'planList' : [
+{'name' : 'Plan 1', 'goals':['Goal 1', 'Goal 2']},
+{'name' : 'Plan 2', 'goals':['Goal 2', 'Goal 1','Goal 3']}]}</div>
+<div id="criteriaTypeJson" style="display: none">{'criteriaTypeList':['MIN','MAX']}</div>
+
+

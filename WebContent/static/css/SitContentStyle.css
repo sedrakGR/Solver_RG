@@ -1,0 +1,219 @@
+h2 {
+	margin: 0;
+	padding: 0;
+}
+.sitContentMainPanelStyle {
+	width: 100%;
+	height: 100%;
+	background-color: #ccc;
+}
+
+.sitDisplayPanelStyle {
+	width: 73%;
+	padding-top: 4px;
+	padding-left: 3px;
+	padding-bottom: 1px;
+	height: 98%;
+	float: left;
+	border-left: 2px inset #777;
+	border-bottom: 2px inset #000;
+	border-right: 2px inset #000;
+	border-top: 2px inset #777;
+	background: url("../images/back.png") no-repeat #333333 center;
+	overflow-y: scroll;	
+}
+
+.sitControlPanelStyle {
+	width: 22%;
+	height: 98%;
+	float: right;
+	padding-top: 4px;
+	padding-left: 2px;
+	padding-right: 5px;
+	padding-bottom: 1px;
+}
+
+.pElementsListStyle {
+	width: 100%;
+	overflow-y: scroll;
+	height: 45%;
+	background-image: url("../images/back.jpg");
+	border-left: 2px inset #777;
+	border-bottom: 2px inset #000;
+	border-right: 2px inset #000;
+	border-top: 2px inset #777;
+	margin: 0px 0px 8px 0px;
+}
+
+.sitConceptsTreeStyle {
+	width: 100%;
+	overflow-y: scroll;
+	height: 48%;
+	background-image: url("../images/back.jpg") center;
+	border-left: 2px inset #777;
+	border-bottom: 2px inset #000;
+	border-right: 2px inset #000;
+	border-top: 2px inset #777;
+}
+
+.findButtonPanelStyle {
+	text-align: center;
+	width: 100%;
+}
+
+.pElementsListContainerStyle{
+	width: 100%;
+	background-color: #eee;
+	height: 28px;
+	border-bottom: 2px inset black;	
+}
+
+.pElementNameFieldStyle{
+	width: 70%;
+	font-weight: bold;
+	color:black;	
+	cursor: default;
+	font-size: 17px;
+	float: left;	
+	padding-left: 8px;
+}
+
+.pElementAddButtonPanelStyle{
+	width: 20%;
+	float: left;
+}
+
+.zeroPanel {
+	width: 1px;
+	overflow-x: scroll;	
+}
+
+.sitButtons {
+	width: 105px;
+}
+
+.sitAccordionPanelStyle {
+	width: 100%;	
+	height: 95%;
+	border-left: 2px inset #777;
+	border-bottom: 2px inset #000;
+	border-right: 2px inset #000;
+	border-top: 2px inset #777;
+	overflow: hidden;
+	margin-bottom: 5px;
+}
+.sitAccordionContainer {
+	width: 100%;
+	height: 100%;
+}
+
+.sitConceptsTree {
+	height: 80%;
+}
+
+.sitConceptsTreeHeader{
+	width: 100%;
+	height: 30px;
+	text-align: center;
+	font-weight: bold;
+	font-size: 19px;
+	border-bottom: 1px black solid;
+	cursor: pointer;
+	background: url("../images/bluegradient.gif") top repeat-x;
+	color: #F8F5DF;	
+	text-shadow: 0px 1px 1px #484949;
+}
+
+.sitConceptsTreeBody {
+	background-color: #eee;
+	width: 100%;
+	overflow-y: scroll;
+	height: 79%;
+}
+
+.figureListContainer {
+	width: 100%;	
+}
+
+.figureListBody {
+	height: 79%;
+	width: 100%;
+}
+
+.conListBody {
+	width: 100%;
+	height: 84%;
+	background-color:#333333;
+	overflow-y: scroll; 
+}
+
+.bunchListBody {
+	height: 79%;
+	width: 100%;
+}
+
+.bunchListHeader{
+	width: 100%;
+	height: 5%;
+	text-align: center;
+	font-weight: bold;
+	font-size: 19px;
+	border-bottom: 1px black solid;
+	border-top: 1px black solid;
+	cursor: pointer;
+	background-color: #C3A488;
+	color: #F8F5DF;
+}
+
+.figurePanel {
+	border-bottom: 2px inset black;
+	border-top: 2px inset black;
+	border-left: 1px solid black;
+	border-right: 2px solid black;
+	width: 48%;
+	height: 70px;
+	float: left;
+	text-align: center;
+	background-color: #ddd;
+}
+
+.hover {
+    border: 5px dashed #aaa;
+    background:#efefef; 
+  }
+
+.findButtonPanelStyle {
+	text-align: center;
+	width: 100%;
+}
+
+.pElementsListContainerStyle{
+	width: 100%;
+	background-color: #eee;
+	height: 28px;
+	border-bottom: 2px inset black;	
+}
+
+.sitListContainer {
+	width: 100%;	
+}
+
+.sitCheckListPanel {
+	float: left;
+	width: 15%;	
+	height: 28px;	
+	background-color: #ccc;
+	border-bottom: 1px solid beige;
+}
+
+.sitNameInList {
+	float: left;
+	width: 85%;
+	height: 28px;	
+	text-align: center;
+	font-weight: bold;
+	color: #222;
+	background-color: #ccc;
+	cursor: default;
+	border-bottom: 1px solid beige;
+}

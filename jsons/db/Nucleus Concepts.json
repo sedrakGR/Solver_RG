@@ -1,0 +1,141 @@
+	{
+		"name": "Color",
+		"parent: "null",
+		"nucleusConceptIndexAttrs": [
+		{
+			"value": 
+			{
+				"minValue": "1",
+				"maxValue": "8"
+			}
+			"name": "x",
+			"oper": "IN"
+			}
+		{
+			"value": 
+			{
+				"minValue": "1",
+				"maxValue": "8"
+			}
+			"name": "y",
+			"oper": "IN"
+			}
+		],
+		"nucleusConceptValueAttrs": [
+		{
+			"value": 
+			{
+				"minValue": "1",
+				"maxValue": "2"
+			}
+			"name": "color",
+			"oper": "IN"
+			}
+		]
+	},
+	{
+		"name": "Figure",
+		"parent: "null",
+		"nucleusConceptIndexAttrs": [
+		{
+			"value": 
+			{
+				"minValue": "1",
+				"maxValue": "8"
+			}
+			"name": "x",
+			"oper": "IN"
+			}
+		{
+			"value": 
+			{
+				"minValue": "1",
+				"maxValue": "8"
+			}
+			"name": "y",
+			"oper": "IN"
+			}
+		],
+		"nucleusConceptValueAttrs": [
+		{
+			"value": 
+			{
+				"minValue": "0",
+				"maxValue": "6"
+			}
+			"name": "figure",
+			"oper": "IN"
+			}
+		]
+	},
+		{
+		"name": "Color",
+		"parent: "null",
+		"nucleusConceptIndexAttrs": [
+		{
+			"value": 
+			{
+				"minValue": "1",
+				"maxValue": "8"
+			}
+			"name": "x",
+			"oper": "IN"
+			}
+		{
+			"value": 
+			{
+				"minValue": "1",
+				"maxValue": "8"
+			}
+			"name": "y",
+			"oper": "IN"
+			}
+		],
+		"nucleusConceptValueAttrs": [
+		{
+			"value": 
+			{
+				"minValue": "1",
+				"maxValue": "2"
+			}
+			"name": "color",
+			"oper": "IN"
+			}
+		]
+	},
+		{
+		"name": "Figure",
+		"parent: "null",
+		"nucleusConceptIndexAttrs": [
+		{
+			"value": 
+			{
+				"minValue": "1",
+				"maxValue": "8"
+			}
+			"name": "x",
+			"oper": "IN"
+			}
+		{
+			"value": 
+			{
+				"minValue": "1",
+				"maxValue": "8"
+			}
+			"name": "y",
+			"oper": "IN"
+			}
+		],
+		"nucleusConceptValueAttrs": [
+		{
+			"value": 
+			{
+				"minValue": "0",
+				"maxValue": "6"
+			}
+			"name": "figure",
+			"oper": "IN"
+			}
+		]
+	},
+	

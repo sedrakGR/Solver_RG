@@ -1,0 +1,83 @@
+{
+concepts: [
+	{
+		"name": "aaaa", 
+		"compConceptAttrs":	[
+							{
+								"name": "sss", 
+								"parent": "New Percept", 
+								"nucleusConceptIndexAttrs": [
+																{
+																	"value": 
+																	{
+																		"minValue": "1", 
+																		"maxValue": "8"
+																	}, 
+																	"name": "x", 
+																	"oper": "IN"
+																}, 
+																{
+																	"value": 
+																	{
+																		"minValue": "1", 
+																		"maxValue": "8"
+																	}, 
+																	"name": "y", 
+																	"oper": "IN"
+																}
+															], 
+								"nucleusConceptValueAttrs": [
+																{
+																	"value": "5", 
+																	"name": "color", 
+																	"oper": "IN"
+																}
+															]
+														}
+													], 
+								"actionName": "New Action"
+		},
+		
+		{
+		"name": "aaaa", 
+		"compConceptAttrs":	[
+							{
+								"name": "sss", 
+								"parent": "New Percept", 
+								"nucleusConceptIndexAttrs": [
+																{
+																	"value": 
+																	{
+																		"minValue": "1", 
+																		"maxValue": "8"
+																	}, 
+																	"name": "x", 
+																	"oper": "IN"
+																}, 
+																{
+																	"value": 
+																	{
+																		"minValue": "1", 
+																		"maxValue": "8"
+																	}, 
+																	"name": "y", 
+																	"oper": "IN"
+																}
+															], 
+								"nucleusConceptValueAttrs": [
+																{
+																	"value": 
+																	{
+																		"minValue": "1", 
+																		"maxValue": "2"
+																	}, 
+																	"name": "color", 
+																	"oper": "IN"
+																}
+															]
+														}
+													], 
+								"actionName": "New Action"
+		}	
+	]
+}

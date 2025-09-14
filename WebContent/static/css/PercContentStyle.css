@@ -1,0 +1,306 @@
+.show {
+	display: block;
+}
+.hide {
+	display: none;
+}
+
+.percContentMainPanelStyle {
+	width: 100%;
+	height: 100%;
+	background-color: #ccc;
+}
+
+.perceptDisplayPanelStyle{
+	width: 63%;
+	padding-top: 4px;
+	padding-left: 3px;
+	padding-bottom: 1px;
+	height: 98%;
+	float: left;
+	border-left: 2px inset #777;
+	border-bottom: 2px inset #000;
+	border-right: 2px inset #000;
+	border-top: 2px inset #777;
+	background: url("../images/back.png") no-repeat #333333 center;
+	overflow-y: scroll;
+}
+
+.controlPanelStyle {
+	width: 32%;
+	height: 98%;
+	float: right;
+	padding-top: 4px;
+	padding-left: 2px;
+	padding-right: 5px;
+	padding-bottom: 1px;
+}
+
+.bunchClassControlButtonsPanelStyle {
+	text-align: center;
+	width: 400px;
+	height: 38px;	
+}
+
+.bunchClassListPanelStyle {
+	width: 100%;
+	height: 94%;
+	border-left: 2px inset #777;
+	border-bottom: 2px inset #000;
+	border-right: 2px inset #000;
+	border-top: 2px inset #777;
+	background-color: #333333;
+	overflow-y: scroll;
+}
+
+
+.bunchClassContainerStyle{
+	width: 300px;
+	background-color: #c8c8c8;
+	position : absolute;
+    left : 150px;
+    top : 55px;
+    border-bottom: #000 2px inset;
+	border-left: #eee 2px inset;
+	border-right: #000 2px inset;
+	border-top: #eee 2px inset;
+	-moz-box-shadow: 3px 3px 3px #000;
+	-webkit-box-shadow: 3px 3px 3px #000;
+	box-shadow: 3px 3px 3px #000;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+}
+
+.bunchClassHeaderPanelStyle {
+	width: 100%;	
+	height: 25px;
+	background: url("../images/cyan-bar.png") top repeat-x;
+	border-bottom: 1px solid #DDDDDD;
+	color: white;
+}
+
+.bunchClassNameFieldStyle {
+	float: left;
+	width: 100%;	
+	height: 25px;
+	font-weight: bold;
+	font-size: 18px;
+	text-align: center;
+	cursor: text;
+	text-shadow: 0 1px 1px #484949;	
+}
+
+
+.parentConceptPanel {
+	width: 100%;
+	height: 28px;
+	text-align: center;	
+	background-color: #ddd;	
+}
+
+.keyPanel {
+	width: 100%;
+	height: 28px;	
+	background-color: #ddd;	
+}
+
+.bunchAttrPanel {
+	display: none;
+	width: 100%;
+	height: 30px;
+	border-top : 1px black solid ;
+	background-color: #888;
+}
+
+.showbunchAttrPanel {
+	width: 100%;
+	height: 30px;
+	border-top : 1px black solid ;
+	background-color: #888;
+	color: white;
+}
+.saveContainerStyle {
+	width: 110px;
+	margin: 0px auto;
+}
+
+
+.VisbunchAttrPanel{
+	width: 100%;
+	height: 30px;
+	border-top : 1px black solid ;
+	background-color: #888;
+}
+
+
+.indexAttributeHeaderStyle {
+	width: 100%;
+	height: 24px;
+	background-color: #eee;
+	border-top: 1px solid black;	
+}
+
+.indexAttributeAdminFieldName {
+	width: 50%;
+	float: left;
+	font-weight: bold;
+	font-size: 12px;
+	text-align: center;
+}
+
+.indexAttributeAdminFieldButton {
+	width: 50%;
+	float: left;
+	font-weight: bold;
+	font-size: 12px;
+}
+
+.valueAttributeHeaderStyle {
+	width: 100%;
+	height: 24px;
+	background-color: #eee;
+	border-top: 1px solid black;
+}
+
+.valueAttributeAdminFieldName {
+	width: 50%;
+	float: left;
+	font-weight: bold;
+	font-size: 12px;
+	text-align: center;
+}
+
+.valueAttributeAdminFieldButton {
+	width: 50%;
+	float: left;
+	font-weight: bold;
+	font-size: 12px;
+}
+
+.bunchAttrNameField {
+    float : left ;
+    width : 45% ; 
+    padding-top: 4px;
+    font-size : 12px ;
+    font-weight : bold ;
+    cursor : text;
+    padding-left: 4px;
+    height: 26px;
+    text-decoration: none;
+    color: inherit;
+}
+
+.bunchAttrOperField {
+	float: left;
+	text-align: center;
+	width: 20%;
+	padding-top: 4px; 
+}
+
+.bunchAttrValuePanel {
+    width : 35% ;     
+    text-align : center ;
+    float : left ;
+    padding-top: 2px;
+}
+
+
+.f_minValue {	
+	width: 20px;
+	font-weight : bold ;
+    text-align : center ;
+    font-size: 12px;
+}
+
+.f_maxValue {
+	width: 20px;
+	text-align : center ;
+    font-weight : bold ;
+    font-size: 12px;	
+}
+
+.midValue {
+	width: 50px;
+	text-align: center;
+	font-weight: bold;
+	font-size: 12px;
+}
+.bunchAttrComboOperStyle {
+	width: 12%;
+	padding-left: 4px;
+    padding-top: 4px;
+	margin-right: 3px;
+	float: left;
+}
+.bunchAttrIndexValueStyle {
+	width: 25%;
+	padding-left: 10px;
+    padding-top: 4px;
+	margin-right: 3px;
+	float: left;
+}
+
+
+.bunchAttrRemoveButtonPanel {
+    float : left ;    
+    text-align : center ;
+    width : 8% ;    
+    padding-top: 6px;
+	cursor: pointer;
+}
+
+.bunchClassNameInTableStyle {
+	width: 97.5%;
+	font-weight: bold;
+	height: 25px;
+	color: white;
+	border-bottom: 1px solid #333; 
+	cursor: default;
+	padding-bottom: 2px;
+	padding-top: 3px;
+	padding-left: 8px;
+	font-size: 17px;
+	cursor: pointer;
+	text-shadow: 0px 1px 1px #484949;
+	background: -webkit-gradient(linear, left top, left bottom, from(#DDDDDD), to(#AAAAAA));
+	background: -moz-linear-gradient(top, #DDDDDD, #AAAAAA);
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#DDDDDDDD, endColorstr=#AAAAAAAA);
+	-ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#DDDDDDDD, endColorstr=#AAAAAAAA)";
+}
+.bunchClassActiveNameInTable {
+	background: -webkit-gradient(linear, left top, left bottom, from(#F9F9F9), to(#AAAAAA));
+	background: -moz-linear-gradient(top, #F9F9F9, #AAAAAA);
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#F9F9F9F9, endColorstr=#AAAAAAAA);
+	-ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#F9F9F9F9, endColorstr=#AAAAAAAA)";
+}
+.bunchClassNameInTableloader {
+	width: 16px;
+	height: 16px;
+	float: right;
+	margin: 5px;
+	background: url(../images/list-loader.gif) center no-repeat;
+	display: none;
+}
+.bunchClassNameInTableClose {
+	width: 15px;
+	height: 15px;
+	float: right;
+	margin: 5px;
+	background: url(../images/close-list.png) 0px -15px no-repeat;
+	display: none;
+}
+.bunchClassNameInTableClose:hover {
+	background-position: top left;
+}
+.bunchAttrsShowStyle {
+	font-weight: bold;
+	text-align: center;
+}
+.bunchAttrSelected {
+	background-color: #fffaba;
+	color: black;
+}
+.bunchClassActive {
+	background-color: gray;
+	z-index: 100;
+}

@@ -1,0 +1,69 @@
+{
+	"allPElements": 
+	[
+		{
+			"percept": 
+			[
+				{
+					"name": "Figure2", 
+					"pElementAttributes": 
+					[
+						{
+							"name": "x", 
+							"value": "1"
+						}, 
+						{	
+							"name": "y", 
+							"value": "1"
+						}, 
+						{
+							"name": "figure", 
+							"value": "5"	
+						}
+					]
+				},
+				{
+					"name": "Figure3", 
+					"pElementAttributes": 
+					[
+						{
+							"name": "x", 
+							"value": "1"
+						}, 
+						{	
+							"name": "y", 
+							"value": "2"
+						}, 
+						{
+							"name": "figure", 
+							"value": "5"	
+						}
+					]
+				}
+			]
+		}, 
+		{
+			"percept": 
+			[
+				{
+					"name": "Color1", 
+					"pElementAttributes": 
+					[
+						{
+							"name": "x", 
+							"value": "1"
+						}, 
+						{
+							"name": "y", 
+							"value": "1"
+						}, 
+						{
+							"name": "color", 
+							"value": "1"
+						}
+					]
+				}
+			]
+		}
+	]
+}

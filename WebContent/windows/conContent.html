@@ -1,0 +1,470 @@
+<div id="conceptsContentMainPanel" class="conceptsContentMainPanelStyle">
+	
+	<!-- skeletons -->
+	<!-- Actions -->
+    <div class="preConditionPanel" style="display: none">
+            <div class="preActionAttrPanel preActionAttrPanelStyle" id="preActionAttrPanel">
+              <div class="actionParentAttribute">
+				<div class="preActionAttrChecker">
+                    <input type="checkbox" class="checker">
+                </div>
+                <div class="preActionAttrName" >New attribute</div>
+                <div class="preActionAttrParentConc" id="preActionAttrParentConc">
+                    <select class="preActionParent">
+                    </select>
+                </div>
+                <div class="preActionSubAttrDisplay">
+                    <div class="showActionAttrChild"></div>
+                </div>
+			  </div>
+			  <div class="actionChildAttribute" style="display: none;"></div>
+			  <div id="actionChildAttributeIndex"></div>
+			</div>
+    </div>
+	
+    <div class="postConditionPanel" style="display: none">
+            <div class="postActionAttrPanel postActionAttrPanelStyle" id="postActionAttrPanel">
+                <div class="postActionAttrChecker">
+                    <input type="checkbox" class="checker">
+                </div>
+                <div class="postActionAttrName" >New attribute</div>
+                <div class="postAttrOper">
+                    <select>
+                        <option>=</option>
+                    </select>
+                </div>
+                <div class="postActionAttrValuePanel" id="postActionAttrValuePanel">
+                    <input type="text" id="postActionValue" class="postActionValue">
+                </div>
+                <div class="postActionSubAttrStyle">
+                </div>
+            </div>
+    </div>
+	
+    <div class="actionPanel" style="display: none">
+        <div class="actionContainer" id="actionContainer">
+            <div class="actionTitleBar">
+                <div class="closeAct closeicon">
+                </div>
+                <div class="helpAct helpicon">
+                </div>
+				<div class="saveAct saveicon">
+                </div>
+            </div>
+            <div class="actionHeader actionHeaderStyle">
+                <div class="actionNameField actionNameFieldStyle" id="actionNameField">New Action</div>
+            </div>
+            <div class="actionAttrContainer actionAttrContainerStyle" id="actionAttrContainer">
+            	<div id="sideIndicator">
+                    <div class="preHeaderPanel">
+                    	<input type="text" placeholder="Side Indicator" class="postActionValue" id="sideIndicatorAttr" name="sideIndicatorAttr"/>
+                    </div>
+                </div>
+                <div id="preCondiotionContainer">
+                    <div class="preHeaderPanel">
+                        <div class="precondition">Precondition</div>
+                        <div class="preActionControlButtonsPanel">
+                            <input type="button" value="Add" class="preActionControlButton" id="addActionPreAttr" /><input type="button" value="Remove" class="preactionControlButton" id="removeActionPreAttr" />
+                        </div>
+                    </div>
+                    <div id="preAttr">
+                    </div>
+                </div>
+                <div id="postCondiotionContainer">
+                    <div class="postHeaderPanel">
+                        <div class="postcondition">Postcondition</div>
+                        <div class="postActionControlButtonsPanel">
+                            <input type="button" value="Add" class="postActionControlButton" id="addActionPostAttr" /><input type="button" value="Remove" class="postActionControlButton" id="removeActionPostAttr" />
+                        </div>
+                    </div>
+                    <div id="postAttr">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+	
+	<!-- Set -->
+<div class="setElementAttrPanel" style="display: none">
+	<div class="setAttrPanel setAttrPanelStyle" id="setAttrPanel">
+	  <div class="setParentAttribute">
+		<div class="setAttrCheckerPanel setAttrCheckerStyle">
+			<input type="checkbox" class="setAttrChecker">
+		</div>
+		<div class="setAttrName setAttrNameStyle">New attribute</div>
+		<div class="setAttrParent">
+			<select class="setAttrParentSelect"></select>
+		</div>
+		<div class="setSubAttrDispCont">
+			<div class="showSetAttrChild"></div>
+		</div>
+	  </div>
+	  <div class="setAttrChildren" style="display: none;"></div>	
+	  <div id="setChildAttributeIndex"></div>
+	</div>
+</div>
+<div class="setAddAttrPanel" style="display: none">
+	<div class="countLineStyle setAddAttrPanel setAddAttrPanelStyle" id="setAddAttrPanel">
+		<div class="setAddAttrCheckerPanel setAddAttrCheckerStyle">
+			<input type="checkbox" class="setAddAttrChecker">
+		</div>
+		<div class="setAddAttrName addAttrtLineNameFieldStyle">New addit attr</div>
+		<div class="addAttrOperPanel">
+			<select id="addAttrOper">
+							<option>=</option>
+							<option>!=</option>
+							<option>&gt;</option>
+							<option>&lt;</option>
+							<option>&gt;=</option>
+							<option>&lt;=</option>	
+			</select>
+		</div>
+		<div class="addAttrsValueField">
+			<input type="text" size="2" class="txt"> 
+		</div>		
+	</div>
+</div>
+<div class="setPanel" style="display: none">
+	<div class="setContainer" id="setContainer">
+	
+	<div class="setTitleBar">
+	<div class="closeSet closeicon">
+	</div>
+	<div class="helpSet helpicon">
+	</div>
+	<div class="saveSet saveicon">
+	</div>
+	</div>
+	
+	<div class="setHeaderPanelStyle" id="setHeaderPanel">
+		<div class="setNameField setNameFieldStyle" id="setNameField">New Set</div>
+		<div class="setAttrAddButtonPanelStyle">	
+			<input type="button" id="addSetAttrs" value="add" />
+			<input type="button" id="removeSetAttrs" value="remove" />	
+		</div>
+	</div>
+
+	<div class="setAttrContainerStyle" id="setAttrContainer">
+		<div class="setAttrStyle" id="setAttr"></div>
+		<div class="setAdditAttrStyle" id="setAdditAttr">
+			<div class="setAdditionalAttrHeaderStyle" id="setAdditionalAttrHeader">
+				<div class="setAdditionalAttrStyle" id="setAdditionalAttr">Additional attrs</div>
+				<div class="setAdditionalButtonPanelStyle" id="setAdditionalButtonPanel">
+					<input type="button" id="addSetAddAttrs" value="add" />
+					<input type="button" id="removeSetAddAttrs" value="remove" />
+				</div>
+			</div>
+			
+			<div id="setAddAttrsCont">
+				<div class="countLineStyle" id="minCount">
+					<div></div>
+					<div class="countLineNameFieldStyle">minCount</div>
+					<div class="countLineOperPanel">
+						<select id="minCountLineOper">
+							<option>=</option>
+							<option>!=</option>
+							<option>&gt;</option>
+							<option>&lt;</option>
+							<option>&gt;=</option>
+							<option>&lt;=</option>	
+						</select>
+					</div>
+					<div class="countLineValueField">
+						<input type="text" size="2" id="minCountValue" class="txt"> 
+					</div>
+				</div>
+				<div class="countLineStyle" id="maxCount">
+					<div></div>
+					<div class="countLineNameFieldStyle">maxCount</div>
+					<div class="countLineOperPanel">
+						<select id="maxCountLineOper">
+							<option>=</option>
+							<option>!=</option>
+							<option>&gt;</option>
+							<option>&lt;</option>
+							<option>&gt;=</option>
+							<option>&lt;=</option>							
+						</select>
+					</div>
+					<div class="countLineValueField">
+						<input type="text" size="2" id="maxCountValue" class="txt"> 
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	</div>
+</div>
+	
+	<!-- Composite Abstract -->
+	<div class="compositeIndex" style="display: none;">
+	<div class="f_bunchAttrPanel showbunchAttrPanel" id="compIndexAttrPanel">	
+			<div class="f_attrName primAttrNameField">New attribute</div>
+			
+			<div class="bunchAttrComboOperStyle" id="nucComboOper">
+			<select id="nucComboOper">
+			<option>=</option>
+			<option>!=</option>
+			<option>&gt;=</option>
+			<option>&gt;</option>
+			<option>&lt;=</option>
+			<option>&lt;</option>
+			<option>IN</option>
+			</select>
+			</div>			
+			
+			<div class="bunchAttrIndexValueStyle" id="nucIndexValue">
+			<div id="nonInterval">
+			<input type="text"  class="midValue" />
+			</div>
+			<div id="Interval" style="display: none">
+			<input type="text"  class="f_minValue" /> -
+			<input type="text"  class="f_maxValue" />
+			</div>
+			</div>
+			
+			<div class="bunchAttrRemoveButtonPanel">
+				<img src="static/images/close_pas.png" />
+			</div>
+	</div>
+	</div>
+	
+<div class="compositeChildAttr" style="display:none;">
+	<div class="composConcChildAttrPanel composConcAttrPanelStyle" id="composConcChildAttrPanel">	  	
+	<div class="compChildParentAttribute">
+		<div class="composChildConcAttrChecker">
+			<input type="checkbox" class="checker"> 
+		</div>
+		<div class="composConcChildAttrNegater">
+			<input type="text" class="negated" />
+		</div>
+		<div class="composConcChildAttrName"></div>
+		<div class="composConcChildAttrParentConc">
+			<select class="composConcChildAttrParent"></select>
+		</div>
+		<div class="composSubChildAttrDisplay">
+			<div class="showChildAttrChild"></div>
+		</div>	
+	</div>
+	<div class="compChildAttrChildren" style="display: none;"></div>
+	<div id="compChildIndexAttributes"></div>
+</div>	
+</div>
+
+<div class="compositeAttr" style="display:none;">
+	<div class="composConcAttrPanel composConcAttrPanelStyle" id="composConcAttrPanel">	  	
+	<div class="compParentAttribute">
+		<div class="composConcAttrChecker">
+			<input type="checkbox" class="checker"> 
+		</div>
+		<div class="composConcAttrNegater">
+			<input type="text" class="negated" />
+		</div>
+		<div class="composConcAttrName">New attribute</div>
+		<div class="composConcAttrParentConc">
+			<select class="composConcAttrParent"></select>
+		</div>
+		<div class="composSubAttrDisplay">
+			<div class="showAttrChild"></div>
+		</div>	
+	</div>
+	<div class="compAttrChildren" id="compAttrChildren" style="display: none;"></div>
+	<div class="composConcIndexAttributes" id="composConcIndexAttributes"></div>
+	</div>		
+</div>
+
+<div class="compositePanel" style="display: none">
+	<div class="compositeConceptContainer compositeConceptContainerStyle" id="compositeConceptContainer">
+	
+	<div class="compTitleBar">
+		ar1<input type="checkbox" name="cr1" value="1" />
+		<div class="closeCom closeicon">
+		</div>
+		<div class="helpCom helpicon">
+		</div>
+		<div class="saveCom saveicon">
+		</div>
+	</div>
+	<div class="composConcHeader composConcHeaderStyle">
+		<div class="composConcNameField composConcNameFieldStyle" id="composConcNameField">New Composite Abstract</div>
+		<div class="composConcControlButtons">
+			<input type="button" value="Add" class="compConcControlButtons" id="addCompConcAttr" />
+			<input type="button" value="Remove" class="compConcControlButtons" id="removeCompConcAttr" />
+		</div>
+	</div>
+
+	<div class="parentConceptPanel">
+		<select id="composParent" class="composParent"></select>
+	</div>
+	
+	<div class="composConcAttrContainer composConcAttrContainerStyle" id="composConcAttrContainer">
+		<div id="attrContainer" class="attrCont"></div>
+		<div class="compIndexAttributeHeader compIndexAttributeHeaderStyle">
+		<div class="compIndexAttributeAdminFieldName">Index Attributes</div>
+		<div class="compIndexAttributeAdminFieldButton" id="compIndexAttributeAdminFieldButton">
+			<input type="button" value="Add Index Attributes" id="addCompIndexAttr" style="font-size: 10px;">
+		</div>
+		</div>
+		<div id="compIndexAttributes"></div>
+<!--
+		<div class="actionInComposStyle" id="actionInCompos">
+			<div class="nameField">New action</div>
+			<div class="actionListPanel">
+				<select style="width: 100px" id="actionNameInSel">
+					<option> </option>
+				</select>
+			</div>
+			<div class="concAddButtonInAction" id="concAddButtonInAction">
+				<input type="button" value="Add"> 
+			</div>			
+		</div>
+		<div id="actionAttrsCont"></div>
+		<div id="postAttrCont"></div>	
+-->		
+	</div>  
+	</div>
+</div>
+	
+	<!-- primitive concept -->
+	<!-- index attribute skeleton -->
+	<div class="primitiveIndex" style="display: none;">
+	<div class="f_bunchAttrPanel showbunchAttrPanel" id="bunchAttrPanel">	
+			<div class="f_attrName primAttrNameField">New attribute</div>
+			
+			<div class="bunchAttrComboOperStyle" id="nucComboOper">
+			<select id="nucComboOper">
+			<option>=</option>
+			<option>!=</option>
+			<option>&gt;=</option>
+			<option>&gt;</option>
+			<option>&lt;=</option>
+			<option>&lt;</option>
+			<option>IN</option>
+			</select>
+			</div>			
+			
+			<div class="bunchAttrIndexValueStyle" id="nucIndexValue">
+			<div id="nonInterval">
+			<input type="text"  class="midValue" />
+			</div>
+			<div id="Interval" style="display: none">
+			<input type="text"  class="f_minValue" /> -
+			<input type="text"  class="f_maxValue" />
+			</div>
+			</div>
+			
+			<div class="bunchAttrRemoveButtonPanel">
+				<img src="static/images/close_pas.png" />
+			</div>
+	</div>
+	</div>
+	
+	<!-- Value attribute skeleton -->
+	<div class="primitiveValue" style="display: none;">
+	<div class="v_bunchAttrPanel showbunchAttrPanel" id="bunchAttrPanel">	
+		<div class="f_attrName primAttrNameField">New attribute</div>
+
+			<div class="bunchAttrComboOperStyle" id="nucComboOper">
+			<select id="nucComboOper">
+			<option>=</option>
+			<option>!=</option>
+			<option>&gt;=</option>
+			<option>&gt;</option>
+			<option>&lt;=</option>
+			<option>&lt;</option>
+			<option>IN</option>
+			</select>
+			</div>	
+			
+			<div class="bunchAttrIndexValueStyle" id="nucIndexValue">
+			<div id="nonInterval">
+			<input type="text"  class="midValue"/>
+			</div>
+			<div id="Interval" style="display: none">
+			<input type="text"  class="f_minValue"/> -
+			<input type="text"  class="f_maxValue"/>
+			</div>
+			</div>
+		
+		<div class="bunchAttrRemoveButtonPanel">
+			<img src="static/images/close_pas.png" />
+		</div>
+	</div>
+</div>
+	
+	<div class="primitivePanel" style="display: none">
+	<div id="primitiveConceptContainer" class="primitiveConceptContainerStyle">
+	<div class="primTitleBar">
+	<div class="closePrim closeicon">
+	</div>
+	<div class="helpPrim helpicon">
+	</div>
+	<div class="savePrim saveicon">
+	</div>
+	</div>
+	
+	<div class="primitiveConceptNameField primitiveConceptNameFieldStyle" id="primitiveConceptNameField">New Primitive Abstract</div>  
+	
+	<div class="parentConceptPanel">
+		<select id="primitiveParent" class="primitiveParent"></select>
+	</div>
+	  
+	<div id="primitiveConceptsAttrsContainer" class="primitiveConceptsAttrsContainer">	
+	<div class="indexAttributeHeader indexAttributeHeaderStyle">
+		<div class="indexAttributeAdminFieldName">Index Attributes</div>
+		<div class="indexAttributeAdminFieldButton" id="indexAttributeAdminFieldButton">
+			<input type="button" value="Add Index Attributes" id="addPrimIndexAttr" style="font-size: 10px;">
+		</div>
+	</div>
+	<div class="indexAttrContainer indexAttrContainerStyle" id="indexAttrContainer">
+	
+	</div>
+	
+	<div class="valueAttributeHeader valueAttributeHeaderStyle">
+		<div class="valueAttributeAdminFieldName">Value Attributes</div>
+		<div class="valueAttributeAdminFieldButton" id="valueAttributeAdminFieldButton">
+			<input type="button" value="Add Value Attributes" id="addPrimValueAttr" style="font-size: 10px;">
+		</div>
+	</div>
+	<div class="valueAttrContainer valueAttrContainerStyle" id="valueAttrContainer">
+	
+	</div>
+	</div> 
+	</div>
+</div>
+	
+	
+	<div id="dialogPlace" class="diologPlaceStyle"></div>
+	<div id="conceptsDisplayPanel" class="conceptsDisplayPanelStyle"></div>
+	
+	<div id="conceptsControlPanel" class="conceptsControlPanelStyle">
+		<div id="conceptsControlButtonsPanel" class="conceptsControlButtonsPanelStyle">
+			<input type="button" value="New Abstract" id="newConceptCreator" />
+			<input type="button" value="Save Abstract" id="saveConcept" />
+		</div>		
+		
+		
+		
+		<div id="setAccordionPanel" class="sitAccordionPanelStyle">	
+			<div class="sitAccordionContainer">	
+					<h2 class="setConceptsTreeHeader" id="setConceptsTreeHeader">Abstract Tree</h2>								
+						<div class="conListBody" id="conceptsListPanel">	
+						<div class="compListWrapper"></div>
+						<div class="primListWrapper"></div>
+						</div>
+					
+					<h2 class="setListHeader blue-back" id="actionListHeaderConc">Actions</h2>
+						<div class="conListBody" id="actionListBodyConc">
+							
+						</div>
+
+					<h2 class="setListHeader green-back" id="setListHeaderConc">Set List</h2>
+						<div class="conListBody" id="setListBodyConc">
+							
+						</div>									
+			</div>
+		</div>		
+	</div>
+	
+</div>

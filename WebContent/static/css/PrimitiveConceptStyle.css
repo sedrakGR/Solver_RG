@@ -1,0 +1,121 @@
+.primitiveConceptContainerStyle {
+	position: absolute;
+	left : 150px ;
+    top : 55px;
+    width: 300px;
+    background-color: #C8C8C8;
+    border-bottom: #000 2px inset;
+	border-left: #eee 2px inset;
+	border-right: #000 2px inset;
+	border-top: #eee 2px inset;
+	-moz-box-shadow: 3px 3px 3px #000;
+	-webkit-box-shadow: 3px 3px 3px #000;
+	box-shadow: 3px 3px 3px #000;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+	opacity: 0.8;
+}
+
+.primTitleBar {
+	height: 22px;
+}
+.primClassActive {
+	background: gray;
+	opacity: 1;
+	z-index: 1000;
+}
+.primitiveConceptNameFieldStyle {
+	width: 100%;
+	height: 25px;
+	background: url(../images/yellow-bar.png) repeat-x;
+	font-weight: 500;
+	font-weight: bold;
+	font-size: 18px;
+	text-align: center;
+	cursor: text;
+	text-shadow: 0 1px 1px #484949;
+	color: white;
+}
+.primAttrNameField {
+	color: inherit;
+    cursor: text;
+    float: left;
+    font-size: 12px;
+    font-weight: bold;
+    height: 26px;
+    padding-left: 4px;
+    padding-top: 4px;
+    text-decoration: none;
+    width: 45%;
+}
+.primitiveConceptParentConceptPanelStyle {
+	width: 100%;
+	padding-bottom: 5px;
+	padding-top: 5px;
+	background-color: #D0F1F9;	
+	text-align: center;
+}
+
+.primitiveConceptParentConceptStyle {
+	width: 85%;
+}
+
+.primitiveConceptsAttrsContainer {
+	width: 100%;
+	background-color: #666;
+}
+
+.primitiveConceptAttrPanelStyle {
+	width : 100% ;
+    height : 30px ;
+    background-color : #eee ;
+    border-top : 1px black solid ;    
+}
+
+.primitiveConceptAttrNamePanelStyle {
+	padding-left: 4px;
+	cursor: default;
+	font-weight: bold;
+	font-size: 16px;
+	width: 38%;
+	float: left;	
+	padding-top: 2px;
+}
+
+.primitiveConceptAttrOperPanelStyle {
+	width: 20%;
+	float: left;
+	text-align: center;	
+	padding-top: 2px;
+}
+
+.primitiveConceptAttrValuePanelStyle {
+	width: 40%;
+	float: right;
+	text-align: center;	
+	padding-top: 2px;
+}
+
+.primitiveConceptAttrValueStyle {
+	width: 90%;	
+	font-weight: bold;
+	text-align: center;
+}
+
+.editInPlacePanel {
+	width: 100%;
+	text-align: center;
+	display: none;
+}
+
+.editInPlaceText {
+	width: 100px;
+}
+
+.editInPlaceButton {
+	width: 68px;
+}
+.primitiveParent {
+	width: 200px;
+	margin-top: 5px;
+}

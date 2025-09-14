@@ -1,0 +1,26 @@
+sudo apt-get update
+sudo apt-get install -y openjdk-11-jdk gradle docker.io
+java -version
+
+
+sudo apt-get install -y tomcat9
+sudo cp build/libs/ssrgt_solver.war /var/lib/tomcat9/webapps/
+# then open http://localhost:8080/ssrgt_solver/
+
+
+# remove ancient gradle if present
+sudo apt -y remove gradle || true
+
+# install SDKMAN and Gradle 8.9
+curl -s https://get.sdkman.io | bash
+source "$HOME/.sdkman/bin/sdkman-init.sh"
+sdk install gradle 8.9
+
+# in your project root (the folder with src/ and WebContent/)
+gradle wrapper --gradle-version 8.9
+
+
+./run-mongo
+
+./build
+

@@ -1,0 +1,61 @@
+<div id="body">
+	<div id="plansInfo" class="plansInfo">
+		<select id="plansList" name="plansList">
+						<option value="">Select Plans</option>
+		</select>
+		<select id="sideList" name="sideList">
+						<option value="1">White</option>
+						<option value="2">Black</option>
+		</select>
+		<br/><br/>
+		<button id="planProcess" type="button" class="ProcessButtons">Process Plan</button>
+		
+		<br/><br/>
+		<button id="processBestPlan" type="button" class="ProcessButtons">Process Best Plan</button>
+		
+		<br/><br/>
+		<button id="nextSuggestion" type="button" class="NextSuggestion" disabled>Next Suggestion</button>
+	
+		
+		<!--
+		<select id="bestActions" name="bestActions">
+						<option value="">Best  Actions</option>
+		</select>
+		-->
+	</div>
+
+
+
+	<div id="board_wraper">
+    <div id="board">
+        <div data-cell="1"></div> <div data-cell="2"></div> <div data-cell="1"></div> <div data-cell="2"></div> <div data-cell="1"></div> <div data-cell="2"></div> <div data-cell="1"></div> <div data-cell="2"></div>
+        <div data-cell="2"></div> <div data-cell="1"></div> <div data-cell="2"></div> <div data-cell="1"></div> <div data-cell="2"></div> <div data-cell="1"></div> <div data-cell="2"></div> <div data-cell="1"></div>
+        <div data-cell="1"></div> <div data-cell="2"></div> <div data-cell="1"></div> <div data-cell="2"></div> <div data-cell="1"></div> <div data-cell="2"></div> <div data-cell="1"></div> <div data-cell="2"></div>
+        <div data-cell="2"></div> <div data-cell="1"></div> <div data-cell="2"></div> <div data-cell="1"></div> <div data-cell="2"></div> <div data-cell="1"></div> <div data-cell="2"></div> <div data-cell="1"></div>
+        <div data-cell="1"></div> <div data-cell="2"></div> <div data-cell="1"></div> <div data-cell="2"></div> <div data-cell="1"></div> <div data-cell="2"></div> <div data-cell="1"></div> <div data-cell="2"></div>
+        <div data-cell="2"></div> <div data-cell="1"></div> <div data-cell="2"></div> <div data-cell="1"></div> <div data-cell="2"></div> <div data-cell="1"></div> <div data-cell="2"></div> <div data-cell="1"></div>
+        <div data-cell="1"></div> <div data-cell="2"></div> <div data-cell="1"></div> <div data-cell="2"></div> <div data-cell="1"></div> <div data-cell="2"></div> <div data-cell="1"></div> <div data-cell="2"></div>
+        <div data-cell="2"></div> <div data-cell="1"></div> <div data-cell="2"></div> <div data-cell="1"></div> <div data-cell="2"></div> <div data-cell="1"></div> <div data-cell="2"></div> <div data-cell="1"></div>
+    </div>
+    </div>
+
+    <div id="figures">
+        <div data-figure="1" data-color="1"></div> <div data-figure="1" data-color="2"></div>
+        <div data-figure="2" data-color="1"></div> <div data-figure="2" data-color="2"></div>
+        <div data-figure="3" data-color="1"></div> <div data-figure="3" data-color="2"></div>
+        <div data-figure="4" data-color="1"></div> <div data-figure="4" data-color="2"></div>
+        <div data-figure="5" data-color="1"></div> <div data-figure="5" data-color="2"></div>
+        <div data-figure="6" data-color="1"></div> <div data-figure="6" data-color="2"></div>
+    </div>
+
+    <div id="toolbar">
+        <a href="javascript:SendBoardState('situation')">Find Active Abstracts</a>
+        <a href="javascript:SendMeaning()" id="send-meaning" class="hide">Show Next Instance</a>
+
+        <select id="actives">
+        </select>
+    </div>
+	<div id="message">
+		<span style="margin:7px;margin-top:7px;margin-left:7px;color:black;">For removeing figure from the board</br> doubleclick on it.</span>
+	</div>
+</div>

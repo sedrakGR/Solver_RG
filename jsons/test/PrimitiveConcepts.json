@@ -1,0 +1,71 @@
+{
+concepts: [
+
+{
+	"name": "TestNucleus0", 
+	"parent": null, 
+	"nucleusConceptIndexAttrs": [
+									{
+										"value": {
+													"minValue": "1", 
+													"maxValue": "5"
+												}, 
+										"name": "cordX", 
+										"oper": "IN"
+									}, 
+									{
+										"value": {
+													"minValue": "1", 
+													"maxValue": "5"
+												}, 
+										"name": "cordY", 
+										"oper": "IN"
+									}
+								], 
+	"nucleusConceptValueAttrs": [
+									{
+										"value": {
+													"minValue": "1", 
+													"maxValue": "10"
+												}, 
+										"name": "attr", 
+										"oper": "IN"
+									}
+								]
+},
+
+{
+	"name": "TestNucleus1", 
+	"parent": null, 
+	"nucleusConceptIndexAttrs": [
+									{
+										"value": {
+													"minValue": "1", 
+													"maxValue": "5"
+												}, 
+										"name": "cordX", 
+										"oper": "IN"
+									}, 
+									{
+										"value": {
+													"minValue": "1", 
+													"maxValue": "5"
+												}, 
+										"name": "cordY", 
+										"oper": "IN"
+									}
+								], 
+	"nucleusConceptValueAttrs": [
+									{
+										"value": {
+													"minValue": "1", 
+													"maxValue": "10"
+												}, 
+										"name": "attr", 
+										"oper": "IN"
+									}
+								]
+}
+
+]
+}

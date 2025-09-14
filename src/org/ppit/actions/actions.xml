@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+        "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+    <package name="user" namespace="/" extends="struts-default, json-default">
+    	
+	<result-types>
+  		<result-type name="json" class="com.googlecode.jsonplugin.JSONResult"/>
+ 	</result-types>
+		
+		<!-- Nucleus Concepts -->
+		
+		<action name="saveNucleus" class="org.ppit.actions.nucleus.SaveNucleus" >
+            <result name="success">jsp/blackboard.jsp</result>
+        </action>
+		
+		<action name="initNucleus" class="org.ppit.actions.nucleus.InitNucleus" >
+            <result name="success">jsp/blackboard.jsp</result>
+        </action>
+		
+		<action name="viewNucleus" class="org.ppit.actions.nucleus.ViewNucleus" >
+            <result name="success">jsp/blackboard.jsp</result>
+        </action>
+		
+		<action name="removeNucleus" class="org.ppit.actions.nucleus.RemoveNucleus" >
+        	<result name="success">jsp/blackboard.jsp</result>
+		</action>
+
+        <!-- Primitive Concepts -->
+
+		<action name="savePrimitive" class="org.ppit.actions.primitive.SavePrimitive" >
+            <result name="success">jsp/blackboard.jsp</result>
+        </action>
+		
+		<action name="initPrimitive" class="org.ppit.actions.primitive.InitPrimitive" >
+            <result name="success">jsp/blackboard.jsp</result>
+        </action>
+	
+		<action name="viewPrimitive" class="org.ppit.actions.primitive.ViewPrimitive" >
+            <result name="success">jsp/blackboard.jsp</result>
+        </action>
+		
+		<action name="removePrimitive" class="org.ppit.actions.primitive.RemovePrimitive" >
+            <result name="success">jsp/blackboard.jsp</result>
+        </action>
+		
+		<!-- Composite Concepts -->
+		
+		<action name="initCompositeParent" class="org.ppit.actions.composite.InitCompositeParent" >
+            <result name="success">jsp/blackboard.jsp</result>
+        </action>
+		
+		<action name="initComposite" class="org.ppit.actions.composite.InitComposite" >
+            <result name="success">jsp/blackboard.jsp</result>
+        </action>
+		
+		<action name="saveComposite" class="org.ppit.actions.composite.SaveComposite" >
+            <result name="success">jsp/blackboard.jsp</result>
+        </action>
+		
+		<action name="viewComposite" class="org.ppit.actions.composite.ViewComposite" >
+            <result name="success">jsp/blackboard.jsp</result>
+        </action>
+		
+		<action name="removeComposite" class="org.ppit.actions.composite.RemoveComposite" >
+            <result name="success">jsp/blackboard.jsp</result>
+        </action>
+		
+		<!-- Actions -->
+		
+		<action name="initAction" class="org.ppit.actions.action.InitAction" >
+            <result name="success">jsp/blackboard.jsp</result>
+        </action>
+        
+        <action name="viewAction" class="org.ppit.actions.action.ViewAction" >
+            <result name="success">jsp/blackboard.jsp</result>
+        </action>
+		
+		<action name="saveAction" class="org.ppit.actions.action.SaveAction" >
+            <result name="success">jsp/blackboard.jsp</result>
+        </action>
+			
+		<action name="removeAction" class="org.ppit.actions.action.RemoveAction" >
+            <result name="success">jsp/blackboard.jsp</result>
+        </action>
+		
+		<!-- Sets -->
+		
+		<action name="saveSet" class="org.ppit.actions.set.SaveSet" >
+            <result name="success">jsp/blackboard.jsp</result>
+        </action>
+        
+        <action name="initSet" class="org.ppit.actions.set.InitSet" >
+            <result name="success">jsp/blackboard.jsp</result>
+        </action>
+		
+		<action name="viewSet" class="org.ppit.actions.set.ViewSet" >
+            <result name="success">jsp/blackboard.jsp</result>
+        </action>
+        <action name="removeSet" class="org.ppit.actions.set.RemoveSet" >
+            <result name="success">jsp/blackboard.jsp</result>
+        </action>	
+        
+        <!-- Chess -->
+        <action name="initChess" class="org.ppit.actions.chess.InitChessAction" >
+            <result name="input">windows/chess/chessContent.jsp</result>
+        </action>   
+       <action name="initChess" class="org.ppit.actions.chess.InitChessAction" >
+            <result name="success">windows/chess/chessContent.jsp</result>
+        </action>   
+
+		<!-- Chess Situation -->
+		<action name="saveSituation" class="org.ppit.actions.situation.SaveSituation" >
+            <result name="success">jsp/blackboard.jsp</result>
+        </action>
+		<action name="processSituation" class="org.ppit.actions.situation.ProcessSituation" >
+            <result name="success">jsp/blackboard.jsp</result>
+        </action>
+	    <action name="nextActiveInstance" class="org.ppit.actions.situation.NextActiveInstance" >
+            <result name="success">jsp/blackboard.jsp</result>
+        </action>
+        
+        <action name="processPlan" class="org.ppit.actions.situation.ProcessPlan" >
+            <result name="success">jsp/blackboard.jsp</result>
+        </action>
+        
+        <action name="selectBestPlan" class="org.ppit.actions.situation.SelectBestPlan" >
+            <result name="success">jsp/blackboard.jsp</result>
+        </action>
+        
+	    <action name="nextSuggestedAction" class="org.ppit.actions.situation.NextSuggestedAction" >
+            <result name="success">jsp/blackboard.jsp</result>
+        </action>
+	    
+		    
+        <!-- Dump -->
+        <action name="dump" class="org.ppit.actions.dumpDB.Dump">
+       		<result type="json" />
+        	<!-- result name="success">
+        		 <param name="contentType">application/octet-stream</param>
+				  <param name="inputName">fileInputStream</param>
+				  <param name="contentDisposition">attachment;filename="dump.txt"</param>
+				  <param name="bufferSize">1024</param>
+        	</result> -->
+        </action>     
+        
+        <!-- UnDump -->
+        <action name="undump" class="org.ppit.actions.dumpDB.UnDump">
+       		<result type="json" />
+        	<!-- result name="success">
+        		 <param name="contentType">application/octet-stream</param>
+				  <param name="inputName">fileInputStream</param>
+				  <param name="contentDisposition">attachment;filename="dump.txt"</param>
+				  <param name="bufferSize">1024</param>
+        	</result> -->
+        </action>
+		
+		<!-- Initialize -->
+		<action name="initializedb" class="org.ppit.actions.dumpDB.InitializeDB">
+       		<result type="json" />
+        </action>
+        <!-- Reset -->
+		<action name="resetdb" class="org.ppit.actions.dumpDB.ResetDB">
+       		<result type="json" />
+        </action>
+        
+        <!-- Visualization -->
+        <action name="manageGraph" class="org.ppit.actions.viz.VisualizationManagerAction" >
+            
+        </action>
+        <action name="skeleton" class="org.ppit.actions.viz.SkeletonAction" >
+            <result type="json" />
+        </action>
+        
+        <!-- Goals -->
+		
+		<action name="saveGoal" class="org.ppit.actions.goal.SaveGoal" >
+            <result name="success">jsp/blackboard.jsp</result>
+        </action>
+        
+        <action name="initGoal" class="org.ppit.actions.goal.InitGoalsList" >
+            <result name="success">jsp/blackboard.jsp</result>
+        </action>
+        
+		<action name="viewGoal" class="org.ppit.actions.goal.ViewGoal" >
+            <result name="success">jsp/blackboard.jsp</result>
+        </action>
+        <action name="removeGoal" class="org.ppit.actions.goal.RemoveGoal" >
+            <result name="success">jsp/blackboard.jsp</result>
+        </action>
+        
+		<!-- Plans -->
+		
+		<action name="savePlan" class="org.ppit.actions.plan.SavePlan" >
+            <result name="success">jsp/blackboard.jsp</result>
+        </action>
+        
+        <action name="initPlan" class="org.ppit.actions.plan.InitPlansList" >
+            <result name="success">jsp/blackboard.jsp</result>
+        </action>
+		
+		<action name="viewPlan" class="org.ppit.actions.plan.ViewPlan" >
+            <result name="success">jsp/blackboard.jsp</result>
+        </action>
+        
+        <action name="removePlan" class="org.ppit.actions.plan.RemovePlan" >
+            <result name="success">jsp/blackboard.jsp</result>
+        </action>
+        
+        <!-- plan wrappers -->
+        
+        <action name="initPlanWrapper" class="org.ppit.actions.planWrapper.InitWrappersList" >
+            <result name="success">jsp/blackboard.jsp</result>
+        </action>
+        
+        <action name="savePlanWrapper" class="org.ppit.actions.planWrapper.SavePlanWrapper" >
+            <result name="success">jsp/blackboard.jsp</result>
+        </action>
+        
+        <action name="viewPlanWrapper" class="org.ppit.actions.planWrapper.ViewPlanWrapper" >
+            <result name="success">jsp/blackboard.jsp</result>
+        </action>
+        
+        <action name="removePlanWrapper" class="org.ppit.actions.planWrapper.RemovePlanWrapper" >
+            <result name="success">jsp/blackboard.jsp</result>
+        </action>
+ 
+  
+  
+      </package>    	
+</struts>

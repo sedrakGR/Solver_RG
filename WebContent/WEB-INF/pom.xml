@@ -1,0 +1,23 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>com.mkyong.common</groupId>
+  <artifactId>ppit_solver_struts</artifactId>
+  <packaging>war</packaging>
+  <version>com.mkyong.common</version>
+  <name>ppit_solver_struts</name>
+  <url>http://maven.apache.org</url>
+  <dependencies>
+
+	<!-- Struts 2 JSON Plugins -->
+	<dependency>
+      <groupId>org.apache.struts</groupId>
+	  <artifactId>jsonplugin-0.34</artifactId>
+	  <version>0.34</version>
+    </dependency>
+
+  </dependencies>
+  <build>
+    <finalName>ppit_solver_struts</finalName>
+  </build>
+</project>

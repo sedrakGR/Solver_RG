@@ -1,0 +1,240 @@
+
+.setContainer {
+	width: 350px;
+	border: 1px solid black;
+	background-color: #C8C8C8;
+	position: absolute;
+	left : 190px;
+    top : 95px;
+	border-bottom: #000 2px inset;
+	border-left: #eee 2px inset;
+	border-right: #000 2px inset;
+	border-top: #eee 2px inset;
+	-moz-box-shadow: 3px 3px 3px #000;
+	-webkit-box-shadow: 3px 3px 3px #000;
+	box-shadow: 3px 3px 3px #000;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+	opacity: 0.8;
+}
+
+.setTitleBar {
+	height: 22px;
+}
+
+.setClassActive {
+	background-color: gray;
+	opacity: 1;
+	z-index: 1000;
+}
+
+.setHeaderPanelStyle {
+	width: 100%;
+	height: 32px;
+	background: url(../images/green-bar.png) repeat-x;
+}
+
+.setNameField {
+	width: 50%;	
+	height: 30px;
+	padding-top: 2px;	
+	text-align: center;
+	font-weight: bold;
+	font-size: 18px;	
+	cursor: default;
+	float: left;
+	color: white;
+	text-shadow: 0 1px 1px #484949;
+}
+
+.setAttrAddButtonPanelStyle {
+	width: 50%;
+	padding-bottom: 4px;
+	padding-top: 3px;	
+	text-align: center;
+	float: left;
+}
+
+.setAttrContainerStyle {
+	width: 100%;
+	background-color: #999;
+}
+.setAttrPanelStyle {	
+	width: 100%;
+}
+.setParentAttribute {
+	border-top: 1px solid #999;	
+	background: url(../images/attr.png) left top repeat-x;
+	width: 100%;	
+	height: 32px;
+}
+.setAttrChildren {
+	width: 100%;	
+}
+.showSetAttrChild {
+    background: url("../images/plus-minus.png") no-repeat scroll center top transparent;
+    cursor: pointer;
+    height: 25px;
+    margin-left: 3px;
+    width: 30px;
+}
+
+.setAttrCheckerStyle {
+	width: 5%;
+	text-align: center;
+	padding-top: 4px;
+	float: left;
+}
+
+.setAttrNameStyle {
+	width: 50%;
+	height: 28px;
+	padding-top: 2px;
+	font-weight: bold;
+	text-align: center;	
+	float: left;
+}
+
+.setAttrParent {
+	width: 35%;
+	float: left;
+	padding-top: 4px;
+	padding-bottom: 4px;
+	text-align: center;
+}
+
+.setSubAttrDispCont {
+	width: 10%;
+	float: right;
+	padding-top: 2px;
+	padding-bottom: 4px;
+	text-align: center;
+}
+
+.setSubAttrContainerStyle {
+	width: 100%;
+	clear: both;
+	float: none;	
+}
+
+.setAttrStyle {
+	width: 100%;
+	clear: both;
+	float: none;
+}
+.setAttrParentSelect {
+	width: 120px;
+}
+
+.setAdditionalAttrHeaderStyle {
+	width: 100%;
+	height: 32px;
+	border-top: 1px #333 solid;
+	background: url(../images/silvergradient.gif) left center repeat-x;
+}
+
+.setAdditionalAttrStyle {
+	width: 50%;	
+	padding-top: 2px;	
+	text-align: center;	
+	font-weight: bold;
+	font-size: 16px;	
+	cursor: default;
+	float: left;
+	color: beige;
+}
+
+.setAdditionalButtonPanelStyle {
+	width: 50%;
+	padding-top: 2px;
+	float: left;
+	text-align: center;
+}
+
+.setAdditAttrStyle {
+	width: 100%;
+	clear: both;
+	float: none;
+}
+
+.countLineStyle {
+	width: 100%;
+	background-color: #888;
+	height: 28px;
+	border-top: 1px solid black;
+}
+
+.countLineNameFieldStyle {
+	width: 65%;
+	padding-top: 3px;
+	text-align: center;
+	font-weight: bold;
+	float: left;	
+	color: beige;
+}
+
+.countLineOperPanel {
+	width: 13%;
+	padding-top: 3px;
+	text-align: center;	
+	float: left;
+}
+
+.countLineValueField {
+	width: 22%;
+	padding-top: 3px;
+	text-align: center;	
+	float: left;
+}
+
+.txt {
+	text-align: center;
+	font-weight: bold;
+}
+
+.setAddAttrPanelStyle {
+	width: 100%;	
+	height: 32px;
+	background: url(../images/attr-dark.png) left center repeat-x;
+	border-top: 1px solid #333;
+}
+
+.setAddAttrCheckerStyle {
+	width: 5%;
+	text-align: center;
+	padding-top: 3px;
+	float: left;
+}
+
+.addAttrtLineNameFieldStyle {
+	width: 55%;
+	height: 28px;
+	padding-top: 3px;
+	font-weight: bold;
+	text-align: center;	
+	float: left;
+	color: beige;
+}
+
+.addAttrOperPanel {
+	width: 23%;
+	float: left;
+	padding-top: 3px;	
+	text-align: center;
+}
+
+.addAttrsValueField {
+	width: 17%;
+	float: left;
+	padding-top: 3px;	
+	text-align: center;
+}
+
+.setNamePanel {
+	width: 100%;
+	height: 30px;
+	background-color: #ccc;
+	border-bottom: 1px solid black;
+	text-align: center;
+	font-weight: bold;	
+}

@@ -1,0 +1,51 @@
+Release Notes
+
+20130412: Added relation type coloring and directions (to indicate source->destrination relations) into the vizualizer.
+20130225: Integrated gephy visualizer into the Solver.
+20130115: Fixed virtual abstract activation. There was an issue of virtual meaning integration into the GA.
+20121212: Added chess demo.
+20121107: Added Cogntion module and integrated Abstract creation, GA initialization and Situation processing.
+20121027: Added GA construction when loading data from DB. Also added modification handling in GA
+		  which now, basically, destroys and re-constructs the GA and Library. As a side effect 
+		  improved GACreator to handle Iterative loading.
+20121025: Added Working Memory Listener. It collects all activated instances for Primary abstracts.
+20121024: Added create situation functionality. It translates the JSON into a set of AR1 instances and 
+          inserts them into the Situation. Added test coverage. 
+
+=======================================================
+Release 1.2
+=======================================================
+20121017: Fixed negation attribute passing from the interface and handling in the back end abstracts.
+20121017: Added Test coverage for abstract activation.
+20121017: Implemented abstract activation algorithm for Nucleus, AR1, Composite and Set.
+20121017: Implemented and fixed dependency extraction for all abstracts.
+20121017: Added new rules for Set abstract support.
+20121017: Implemented abstracts assimilation functionality to integrate new Meanings into the GA.
+20121017: Added cloning functionality to all instances, rules and expressions.
+
+=======================================================
+Release 1.1
+=======================================================
+20120617: Added different type of GA Nodes.
+20120617: Added 'brain' module which represents the Graph of Abstracts .
+20120617: Added basic testing for concepts.
+
+=======================================================
+Release 1.0
+=======================================================
+20110618: Added dumping Db and unDumping in ConceptRW.java dumpConcepts and unDump
+		  and in ReadActions.java dumpActionCollection and unDump methods 
+20110617: Added '--Select Parent--' option for composite concepts.
+20110613: Fixed nested concept attribute Showing.
+20110613: Added Action and Set loading support. Also Action modifications are being handled 
+		  in front-end.
+20110612: RemoveSet and View Set actions are added, but they are not implemented in frontend
+		  fixed issue in saving set
+ 		  fixed issue in removing action
+20110612: Added set loading action
+20110612: Fixed set saving. There was an issue with composite concepts.
+20110612: Corrected Sets nested composite attribute's name in SetManager.java
+20110610: Added public getConceptNamesInTree() (which returns the concept list in tree mode) and private getConcContent() methoda in ConceptsManager
+20110609: Added Set read/write (save, modify, delete) support in back-end.
+20110606: fillInActionWindow(json) is added to display action window and line 273 lists is added to remove action concept. 
+20110606: Added release_notes.txt for documentation updates.

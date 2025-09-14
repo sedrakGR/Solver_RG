@@ -1,0 +1,127 @@
+
+<div id="percContentMainPanel" class="percContentMainPanelStyle">
+
+	<div id="perceptDisplayPanel" class="perceptDisplayPanelStyle">
+	<div class="helpContent" style="display: none"></div>
+	
+		<!-- index attribute skeleton -->
+	<div class="nucleusIndex" style="display: none;">
+	<div class="f_bunchAttrPanel showbunchAttrPanel" id="bunchAttrPanel">	
+			<div class="f_attrName bunchAttrNameField">New attribute</div>
+			
+			<div class="bunchAttrComboOperStyle" id="nucComboOper">
+			<select id="nucComboOper">
+			<option>=</option>
+			<option>!=</option>
+			<option>&gt;=</option>
+			<option>&gt;</option>
+			<option>&lt;=</option>
+			<option>&lt;</option>
+			<option>IN</option>
+			</select>
+			</div>			
+			
+			<div class="bunchAttrIndexValueStyle" id="nucIndexValue">
+			<div id="nonInterval">
+			<input type="text"  class="midValue" />
+			</div>
+			<div id="Interval" style="display: none">
+			<input type="text"  class="f_minValue" /> -
+			<input type="text"  class="f_maxValue" />
+			</div>
+			</div>
+			
+			<div class="bunchAttrRemoveButtonPanel">
+				<img src="static/images/close_pas.png" />
+			</div>
+	</div>
+	</div>
+	
+	<!-- Value attribute skeleton -->
+	
+	<div class="nucleusValue" style="display: none;">
+	<div class="v_bunchAttrPanel showbunchAttrPanel" id="bunchAttrPanel">	
+		<div class="f_attrName bunchAttrNameField">New attribute</div>
+
+			<div class="bunchAttrComboOperStyle" id="nucComboOper">
+			<select id="nucComboOper">
+			<option>=</option>
+			<option>!=</option>
+			<option>&gt;=</option>
+			<option>&gt;</option>
+			<option>&lt;=</option>
+			<option>&lt;</option>
+			<option>IN</option>
+			</select>
+			</div>	
+			
+			<div class="bunchAttrIndexValueStyle" id="nucIndexValue">
+			<div id="nonInterval">
+			<input type="text"  class="midValue"/>
+			</div>
+			<div id="Interval" style="display: none">
+			<input type="text"  class="f_minValue"/> -
+			<input type="text"  class="f_maxValue"/>
+			</div>
+			</div>
+		
+		<div class="bunchAttrRemoveButtonPanel">
+			<img src="static/images/close_pas.png" />
+		</div>
+	</div>
+	</div>
+	
+<div class="classPanel" style="display: none">
+
+<div class="bunchClassContainer bunchClassContainerStyle" id="bunchClassContainer">	
+	
+	<div class="nucTitleBar">
+	<div class="nucKey keyicon">
+	</div>
+	<div class="closeNuc closeicon">
+	</div>
+	<div class="helpNuc helpicon">
+	</div>
+	<div class="saveNuc saveicon">
+	</div>
+	</div>
+	
+	<div class="bunchClassHeaderPanel bunchClassHeaderPanelStyle">	
+		<div id="bunchClassNameField" class="bunchClassNameField bunchClassNameFieldStyle">New Nucleus Abstract</div>	
+	</div>
+
+	<div class="keyPanel"></div>
+	
+	<div class="indexAttributeHeader indexAttributeHeaderStyle">
+		<div class="indexAttributeAdminFieldName">Index Attributes</div>
+		<div class="indexAttributeAdminFieldButton" id="indexAttributeAdminFieldButton">
+			<input type="button" value="Add Index Attributes" id="addIndexAttr" style="font-size: 10px;">
+		</div>
+	</div>
+	<div class="indexAttrContainer indexAttrContainerStyle" id="indexAttrContainer"></div>
+	
+	<div class="valueAttributeHeader valueAttributeHeaderStyle">
+		<div class="valueAttributeAdminFieldName">Value Attributes</div>
+		<div class="valueAttributeAdminFieldButton" id="valueAttributeAdminFieldButton">
+			<input type="button" value="Add Value Attributes" id="addValueAttr" style="font-size: 10px;">
+		</div>
+	</div>
+	<div class="valueAttrContainer valueAttrContainerStyle" id="valueAttrContainer">
+	
+	</div>
+	
+</div>
+	</div>
+	</div>
+	
+	<div id="controlPanel" class="controlPanelStyle">
+		<div id="BunchClassControlButtonsPanel" class="bunchClassControlButtonsPanelStyle">
+			<input type="button" value="New Nucleus Abstract" id="newBunchClassCreator" />
+			<input type="button" value="Save Nucleus Abstract" id="saveBunchClass" />
+		</div>
+		<div id="bunchClassListPanel" class="bunchClassListPanelStyle">
+		
+		</div>
+	</div>
+	
+</div>
