@@ -362,8 +362,12 @@
 	
 	<!-- Value attribute skeleton -->
 	<div class="primitiveValue" style="display: none;">
-	<div class="v_bunchAttrPanel showbunchAttrPanel" id="bunchAttrPanel">	
+	<div class="v_bunchAttrPanel showbunchAttrPanel" id="bunchAttrPanel">
 		<div class="f_attrName primAttrNameField">New attribute</div>
+
+			<div class="bunchAttrClassifierStyle" style="display:inline-block; margin-right:6px;">
+				<select class="f_classifier"><option value="">(no classifier)</option></select>
+			</div>
 
 			<div class="bunchAttrComboOperStyle" id="nucComboOper">
 			<select id="nucComboOper">
@@ -374,19 +378,29 @@
 			<option>&lt;=</option>
 			<option>&lt;</option>
 			<option>IN</option>
+			<option>IS</option>
+			<option>NOT IS</option>
 			</select>
-			</div>	
-			
+			</div>
+
 			<div class="bunchAttrIndexValueStyle" id="nucIndexValue">
 			<div id="nonInterval">
 			<input type="text"  class="midValue"/>
+			<div class="f_symbolList"
+				style="display:none; min-width:150px; max-height:160px; overflow-y:auto; padding:4px 6px; background:#fff; color:#111; border:1px solid #888; vertical-align:top;"
+				title="Tick the class names you want to allow"></div>
+			<button type="button" class="f_symbolAll" style="display:none; font-size:10px;">all</button>
+			<button type="button" class="f_symbolNone" style="display:none; font-size:10px;">none</button>
+			<button type="button" class="f_symbolApply" style="display:none; font-size:10px;" title="Commit current selection">apply</button>
+			<span class="f_symbolPreview" style="display:none; margin-left:6px; font-size:11px; color:#444;"></span>
+			<input type="hidden" class="f_symbolValueCommitted" value=""/>
 			</div>
 			<div id="Interval" style="display: none">
 			<input type="text"  class="f_minValue"/> -
 			<input type="text"  class="f_maxValue"/>
 			</div>
 			</div>
-		
+
 		<div class="bunchAttrRemoveButtonPanel">
 			<img src="static/images/close_pas.png" />
 		</div>

@@ -45,6 +45,14 @@
 		<action name="removePrimitive" class="org.ppit.actions.primitive.RemovePrimitive" >
             <result name="success">jsp/blackboard.jsp</result>
         </action>
+
+		<!-- NN classifiers (for the value-attribute picker on nuclei/primitives) -->
+		<action name="listClassifiers" class="org.ppit.actions.primitive.ListClassifiers" >
+            <result type="json" />
+        </action>
+		<action name="getVocabulary" class="org.ppit.actions.primitive.GetVocabulary" >
+            <result type="json" />
+        </action>
 		
 		<!-- Composite Concepts -->
 		

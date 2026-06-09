@@ -34,3 +34,13 @@ Thumbs.db
 # Env files
 .env
 .env.*
+
+# Solver_train: keep source + docs + manifests; exclude heavy artifacts
+Solver_train/venv/
+Solver_train/__pycache__/
+**/__pycache__/
+Solver_train/data/
+Solver_train/artifacts/
+Solver_train/test_output.png
+Solver_train/board_annotated_auto2.png
+Solver_train/*.pt

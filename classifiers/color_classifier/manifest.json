@@ -1,0 +1,23 @@
+{
+  "schemaVersion": 1,
+  "classifierId": "color_classifier",
+  "displayName": "Chess Piece Color",
+  "kind": "categorical",
+  "classNames": ["white", "black"],
+  "suggestedPrimitiveTypeName": "FigureColor",
+  "checkpointPath": "../../Solver_train/artifacts/color_classifier.pt",
+  "inputSpec": {
+    "modality": "image",
+    "channels": 3,
+    "height": 128,
+    "width": 128,
+    "normalization": "imagenet"
+  },
+  "trainingMetadata": {
+    "framework": "pytorch",
+    "arch": "resnet18",
+    "target": "color",
+    "producedBy": "Solver_train/chess_piece_classifier.py",
+    "note": "placeholder — regenerate with `python Solver_train/chess_piece_classifier.py export-vocab --checkpoint Solver_train/artifacts/color_classifier.pt --output-dir classifiers/color_classifier` once the .pt is trained."
+  }
+}

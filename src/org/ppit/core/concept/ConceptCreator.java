@@ -7,6 +7,8 @@ import org.json.*;
 import org.ppit.core.concept.composite.CompositeConcept;
 import org.ppit.core.concept.primitive.PrimitiveConcept;
 import org.ppit.core.concept.primitive.PrimitiveType;
+import org.ppit.core.concept.primitive.Vocabulary;
+import org.ppit.core.concept.primitive.VocabularyRegistry;
 import org.ppit.core.concept.set.SetConcept;
 
 import org.ppit.core.concept.rules.*;
@@ -40,12 +42,32 @@ public class ConceptCreator {
 	 */
 	public IRule createRule(String expression, String operator) throws InvalidExpression, InvalidOperator
 	{
+		return createRule(expression, operator, null);
+	}
+
+	/**
+	 * @brief Creates the rule, optionally in the context of a classifier vocabulary.
+	 * @param vocabulary the vocabulary this attribute is bound to, or null for numeric rules
+	 */
+	public IRule createRule(String expression, String operator, Vocabulary vocabulary) throws InvalidExpression, InvalidOperator
+	{
 		IRule rule = null;
 		if (expression.equals(Definitions.ruleAbstractValue)) {
 			rule = new RuleAbstract();
 		} else if (expression.equals(Definitions.ruleWildcardValue)) {
 			rule = new RuleWildcard();
-		} 
+		}
+		else if (operator.equals(Definitions.isOperator)) {
+			if (vocabulary == null) {
+				throw new InvalidOperator("Operator 'IS' requires a classifier vocabulary on the nucleus.");
+			}
+			rule = new RuleIs(expression, vocabulary);
+		} else if (operator.equals(Definitions.notIsOperator)) {
+			if (vocabulary == null) {
+				throw new InvalidOperator("Operator 'NOT IS' requires a classifier vocabulary on the nucleus.");
+			}
+			rule = RuleIs.createNegated(expression, vocabulary);
+		}
 		else if (operator.equals(Definitions.greaterOperator)) {
 			rule = new RuleG(expression);
 		} else if (operator.equals(Definitions.greaterEqualsOperator)) {
@@ -64,6 +86,56 @@ public class ConceptCreator {
 			throw new InvalidOperator("Error: " + operator + " is not supported.");
 		}
 		return rule;
+	}
+
+
+	/**
+	 * Pulls a {@link Vocabulary} for a nucleus declaration. The manifest may be referenced
+	 * either at the nucleus top-level (applies to all value attributes) or at an individual
+	 * value attribute. The first non-null hit from this pass (top-level, then first value attr
+	 * that declares a classifier) wins.
+	 */
+	private Vocabulary resolveVocabularyFromJSON(JSONObject conceptJSON, String conceptName) {
+		// Top-level classifier on the nucleus.
+		String classifierId = conceptJSON.optString(Definitions.classifierIdJSON, null);
+		Vocabulary v = lookupVocabulary(classifierId, conceptName);
+		if (v != null) return v;
+
+		// Then scan value attributes.
+		if (conceptJSON.has(Definitions.valueAttributeJSON)) {
+			try {
+				JSONArray arr = conceptJSON.getJSONArray(Definitions.valueAttributeJSON);
+				for (int i = 0; i < arr.length(); ++i) {
+					JSONObject attr = arr.getJSONObject(i);
+					v = resolveVocabularyFromAttribute(attr);
+					if (v != null) return v;
+				}
+			} catch (JSONException ignored) {
+				// Fall through; caller handles missing shapes.
+			}
+		}
+
+		// Last-resort: if a registry vocabulary was registered as suggested for this type name, use it.
+		VocabularyRegistry reg = VocabularyRegistry.getInstance();
+		return reg.getBySuggestedPrimitiveTypeName(conceptName);
+	}
+
+	private Vocabulary resolveVocabularyFromAttribute(JSONObject attr) {
+		String classifierId = attr.optString(Definitions.classifierIdJSON, null);
+		return lookupVocabulary(classifierId, null);
+	}
+
+	private Vocabulary lookupVocabulary(String classifierId, String contextHint) {
+		if (classifierId == null || classifierId.isEmpty()) return null;
+		VocabularyRegistry reg = VocabularyRegistry.getInstance();
+		Vocabulary v = reg.getById(classifierId);
+		if (v == null) {
+			Logger.getInstance().log(Logger.WARNING,
+					"ConceptCreator: classifier '" + classifierId + "' referenced by "
+							+ (contextHint != null ? contextHint : "a value attribute")
+							+ " is not in the VocabularyRegistry.");
+		}
+		return v;
 	}
 
 	private String getAttrValue(String operator, JSONObject ruleJSON) throws JSONException
@@ -103,8 +175,14 @@ public class ConceptCreator {
 		Boolean isUpdate = false;
 		
 		// Handle PrimitiveType
-		if(parentName.equals(Definitions.emptyString) || parentName.equals(conceptName)) { 
+		if(parentName.equals(Definitions.emptyString) || parentName.equals(conceptName)) {
 			PrimitiveType type = new PrimitiveType(conceptName);
+			// If a classifier is declared on either the nucleus itself or its value attribute,
+			// bind the vocabulary now so downstream primitives can use IS rules.
+			Vocabulary nucleusVocab = resolveVocabularyFromJSON(conceptJSON, conceptName);
+			if (nucleusVocab != null) {
+				type.setVocabulary(nucleusVocab);
+			}
 			primConcept = new PrimitiveConcept(conceptName, type, null);
 		} else {
 			// If concept exists in the library then modify it - update only (nod delete).
@@ -152,11 +230,19 @@ public class ConceptCreator {
 		// Get the name of concept attribute
 		// This is not needed, but we keep it because it is used in the front end
 		String attributeName = conceptAttribute.getString(Definitions.nameJSON);
-		// Get the operator of concept attribute 
+		// Get the operator of concept attribute
 		String operator = conceptAttribute.getString(Definitions.operatorJSON);
-		String attributeValue = getAttrValue(operator, conceptAttribute); 
-		
-		IRule rule= createRule(attributeValue, operator);
+		String attributeValue = getAttrValue(operator, conceptAttribute);
+
+		// If the value attribute itself declares a classifier, it overrides / supplies the vocabulary.
+		// Otherwise inherit from the primitive's type (which nuclei set up above; derived primitives
+		// inherit via parent.getType()).
+		Vocabulary ruleVocab = resolveVocabularyFromAttribute(conceptAttribute);
+		if (ruleVocab == null && primConcept.getType() != null && primConcept.getType().hasVocabulary()) {
+			ruleVocab = primConcept.getType().getVocabulary();
+		}
+
+		IRule rule = createRule(attributeValue, operator, ruleVocab);
 		primConcept.setAttribute(attributeName, rule);
 		primConcept.evaluateDependencies();
 		

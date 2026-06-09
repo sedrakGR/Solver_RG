@@ -1,0 +1,23 @@
+{
+  "schemaVersion": 1,
+  "classifierId": "type_classifier",
+  "displayName": "Chess Piece Type",
+  "kind": "categorical",
+  "classNames": ["pawn", "knight", "bishop", "rook", "queen", "king"],
+  "suggestedPrimitiveTypeName": "FigureType",
+  "checkpointPath": "../../Solver_train/artifacts/type_classifier.pt",
+  "inputSpec": {
+    "modality": "image",
+    "channels": 3,
+    "height": 128,
+    "width": 128,
+    "normalization": "imagenet"
+  },
+  "trainingMetadata": {
+    "framework": "pytorch",
+    "arch": "resnet18",
+    "target": "type",
+    "producedBy": "Solver_train/chess_piece_classifier.py",
+    "note": "placeholder — regenerate with `python Solver_train/chess_piece_classifier.py export-vocab --checkpoint Solver_train/artifacts/type_classifier.pt --output-dir classifiers/type_classifier` once the .pt is trained."
+  }
+}

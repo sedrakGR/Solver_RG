@@ -1,0 +1,37 @@
+# Build artifacts
+build/
+**/build/
+.gradle/
+out/
+bin/
+target/
+
+# VCS / IDE
+.git/
+.idea/
+.vscode/
+.settings/
+*.iml
+
+# OS junk
+.DS_Store
+Thumbs.db
+
+# Python venv from the training side — never needed in the Docker image
+Solver_train/venv/
+Solver_train/__pycache__/
+**/__pycache__/
+
+# Training datasets — large and only used by Solver_train training runs,
+# not by the Java/Tomcat runtime.
+Solver_train/data/
+
+# Per-epoch checkpoint snapshots. The runtime image only needs the canonical
+# .pt files referenced by classifiers/*/manifest.json (currently just
+# Solver_train/artifacts/neighborhood_detector.pt).
+Solver_train/artifacts/*_epoch*.pt
+Solver_train/test_output.png
+Solver_train/board_annotated_auto2.png
+
+# Misc
+*.log

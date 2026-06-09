@@ -1,0 +1,25 @@
+{
+  "schemaVersion": 1,
+  "classifierId": "neighborhood_detector",
+  "displayName": "Chess Board Neighborhood Detector",
+  "kind": "relation",
+  "classNames": [
+    "not_neighbor",
+    "neighbor"
+  ],
+  "checkpointPath": "../../Solver_train/artifacts/neighborhood_detector.pt",
+  "inputSpec": {
+    "modality": "image-pair",
+    "channels": 3,
+    "height": 64,
+    "width": 64,
+    "normalization": "imagenet"
+  },
+  "trainingMetadata": {
+    "framework": "pytorch",
+    "arch": "resnet18",
+    "bestValAcc": 0.8388798701298701,
+    "producedBy": "Solver_train/chess_neighborhood_detector.py",
+    "producedAt": "2026-04-22T11:57:54.924576+00:00"
+  }
+}

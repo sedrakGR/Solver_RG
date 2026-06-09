@@ -20,6 +20,8 @@
 			<option>&lt;=</option>
 			<option>&lt;</option>
 			<option>IN</option>
+			<option>IS</option>
+			<option>NOT IS</option>
 			</select>
 			</div>			
 			
@@ -42,8 +44,17 @@
 	<!-- Value attribute skeleton -->
 	
 	<div class="nucleusValue" style="display: none;">
-	<div class="v_bunchAttrPanel showbunchAttrPanel" id="bunchAttrPanel">	
+	<div class="v_bunchAttrPanel showbunchAttrPanel" id="bunchAttrPanel">
 		<div class="f_attrName bunchAttrNameField" contenteditable="true">New Value</div>
+
+			<!-- Optional: bind this value attribute to an NN classifier. When a classifier is chosen,
+			     IS / NOT IS operators become meaningful and the value input becomes a dropdown
+			     populated from the classifier's class names. -->
+			<div class="bunchAttrClassifierStyle" style="display:inline-block; margin-right:6px;">
+				<select class="f_classifier">
+					<option value="">(no classifier)</option>
+				</select>
+			</div>
 
 			<div class="bunchAttrComboOperStyle" id="nucComboOper">
 			<select id="nucComboOper">
@@ -53,19 +64,22 @@
 			<option>&lt;=</option>
 			<option>&lt;</option>
 			<option>IN</option>
+			<option>IS</option>
+			<option>NOT IS</option>
 			</select>
-			</div>	
-			
+			</div>
+
 			<div class="bunchAttrIndexValueStyle" id="nucIndexValue">
 			<div id="nonInterval">
 			<input type="text" maxlength="200" class="midValue"/>
+			<select class="f_symbolValue" style="display:none;"></select>
 			</div>
 			<div id="Interval" style="display: none">
 			<input type="text" maxlength="200" class="f_minValue"/> -
 			<input type="text" maxlength="200" class="f_maxValue"/>
 			</div>
 			</div>
-		
+
 		<div class="bunchAttrRemoveButtonPanel">
 			<img src="static/images/close_pas.png" />
 		</div>

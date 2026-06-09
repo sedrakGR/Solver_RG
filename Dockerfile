@@ -18,7 +18,9 @@ FROM mongo:3.4
 
 ## Default Mongo URL points to the in-container mongod
 ENV MONGO_URL="mongodb://127.0.0.1:27017/yourdb"
-ENV CATALINA_OPTS="-Dmongo.url=${MONGO_URL}"
+## NN classifier drop folder (read at startup by VocabularyRegistry).
+ENV SOLVER_CLASSIFIERS_DIR="/opt/solver/classifiers"
+ENV CATALINA_OPTS="-Dmongo.url=${MONGO_URL} -Dsolver.classifiers.dir=${SOLVER_CLASSIFIERS_DIR}"
 
 ## Copy Java and Tomcat from the tomcat image
 # Eclipse Temurin images expose JAVA_HOME at /opt/java/openjdk
@@ -30,6 +32,13 @@ ENV PATH="$JAVA_HOME/bin:/usr/local/tomcat/bin:${PATH}"
 ## Deploy our app as ROOT.war and remove defaults
 RUN rm -rf /usr/local/tomcat/webapps/*
 COPY --from=build /home/gradle/project/build/libs/ssrgt_solver.war /usr/local/tomcat/webapps/ROOT.war
+
+## Ship the NN classifier drop folder + the trained checkpoints that exist.
+## The manifests have checkpointPath relative to the manifest itself (e.g.
+## "../../Solver_train/artifacts/neighborhood_detector.pt"), so we mirror that
+## layout under /opt/solver to keep relative paths valid in-container.
+COPY --from=build /home/gradle/project/classifiers /opt/solver/classifiers
+COPY --from=build /home/gradle/project/Solver_train/artifacts/neighborhood_detector.pt /opt/solver/Solver_train/artifacts/neighborhood_detector.pt
 
 # Data directory for MongoDB
 RUN mkdir -p /data/db

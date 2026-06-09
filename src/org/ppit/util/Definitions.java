@@ -36,9 +36,15 @@ public class Definitions {
 	public static final String lessEqualsOperator = "<=";
 	// "Not equals to"
 	public static final String notEqualsOperator = "!=";
-	//operator - this is used in JSONs to get the operator for rules or etc... 
-	//TODO: NOTE: for now this should not be used in Actions because we suppose to have only "=" operator for them 
+	// "IS" — categorical membership against a classifier vocabulary (name-valued equality)
+	public static final String isOperator = "IS";
+	// "NOT IS" — categorical non-membership against a classifier vocabulary
+	public static final String notIsOperator = "NOT IS";
+	//operator - this is used in JSONs to get the operator for rules or etc...
+	//TODO: NOTE: for now this should not be used in Actions because we suppose to have only "=" operator for them
 	public static final String operatorJSON = "oper";
+	// JSON key on a value attribute that names the classifier/vocabulary that owns its symbols
+	public static final String classifierIdJSON = "classifier";
 	//minValue
 	public static final String minValueJSON = "minValue";
 	//maxValue
