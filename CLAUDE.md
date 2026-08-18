@@ -86,6 +86,44 @@ curl "http://localhost:8080/processSituation.action?situationName=<name>"   # ""
 (`compositeName=<json>`) accept the same JSON the UI posts — handy for scripted setup.
 UI flows are best verified with headless Chrome (`/usr/bin/google-chrome`) via Playwright.
 
+## Perception pipeline details
+
+* Flow: image → `predict_board.py` (occupancy heuristic, then type + colour CNNs per
+  cell) → per-cell JSON → `SituationManager.createSituationFromImage` (names → ints) →
+  64 IdGroups × 4 NucleusInstances → GA matching.
+* **IdGroups are numbered 1..64 row-major from a8**, which is exactly how
+  `showActiveInstance()` indexes `#board > div`. Keep that ordering or instance
+  highlighting silently lands on the wrong squares.
+* **First call takes ~10-20 s**: every request spawns a fresh Python process that imports
+  torch and loads both checkpoints. There is no warm sidecar yet.
+* **"Empty" is a brightness-variance heuristic**, not a learned class
+  (`--occupancy-var-threshold`, default 120). It works on rendered boards; textured
+  photos will fool it. `Solver_new_26` has a real 7-class model incl. `none` if this
+  needs fixing properly.
+* The board box is a centred-square guess (92 % of the smaller side) — no perspective
+  correction. Angled photos need `Solver_new_26/scripts/warp_and_crop.py`.
+* The **composite editor has no IS/NOT IS picker** (nucleus and primitive editors do). It
+  displays and stores symbolic values but shows a raw comma list; prefer defining a named
+  primitive and referencing it, or post the JSON via `saveComposite.action`.
+
+## Verifying UI flows
+
+The UI is jQuery-1.5-era with `.live()` delegation and no test suite, so behaviour is
+best confirmed by driving it headlessly:
+
+```python
+p.chromium.launch(executable_path="/usr/bin/google-chrome", headless=True)
+```
+Install Playwright into a throwaway venv (`python3 -m venv pwenv && pwenv/bin/pip install
+playwright`); the system Chrome works, no `playwright install` needed. Register
+`page.on("pageerror", ...)` — a broken handler shows up as silence, not an error.
+
+To build a test board that the auto board-box detector aligns to exactly, paste a
+1024×1024 board (8 × 128 px cells from `Solver_train/data/piece_crops/`) onto a
+**1114×1114** canvas at offset (45, 45): `estimate_board_box` takes `int(W * 0.92)`
+centred, which is 1024 at that width. Mis-sized canvases shift the grid and the
+classifiers read half-squares.
+
 ## Repo hygiene
 
 Tracked: engine source, UI, manifests, docs, the three `.pt` checkpoints and
