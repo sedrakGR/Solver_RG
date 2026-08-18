@@ -61,3 +61,7 @@ Solver_train/Solver_new_26/data/raw/
 # Same guide is tracked at doc/12Oct2016 User Guide for SSRGT.docx (uploaded
 # separately); this root copy is a local duplicate.
 /12Oct2016 User Guide for SSRGT.docx
+
+# Claude Code: personal settings stay local; shared project settings
+# (.claude/settings.json) are meant to be committed.
+/.claude/settings.local.json
