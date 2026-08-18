@@ -3,7 +3,15 @@
   "classifierId": "type_classifier",
   "displayName": "Chess Piece Type",
   "kind": "categorical",
-  "classNames": ["pawn", "knight", "bishop", "rook", "queen", "king"],
+  "classNames": [
+    "empty",
+    "pawn",
+    "bishop",
+    "knight",
+    "rook",
+    "queen",
+    "king"
+  ],
   "suggestedPrimitiveTypeName": "FigureType",
   "checkpointPath": "../../Solver_train/artifacts/type_classifier.pt",
   "inputSpec": {
@@ -18,6 +26,8 @@
     "arch": "resnet18",
     "target": "type",
     "producedBy": "Solver_train/chess_piece_classifier.py",
-    "note": "placeholder — regenerate with `python Solver_train/chess_piece_classifier.py export-vocab --checkpoint Solver_train/artifacts/type_classifier.pt --output-dir classifiers/type_classifier` once the .pt is trained."
+    "note": "placeholder \u2014 regenerate with `python Solver_train/chess_piece_classifier.py export-vocab --checkpoint Solver_train/artifacts/type_classifier.pt --output-dir classifiers/type_classifier` once the .pt is trained.",
+    "syntheticIndex0": "synthetic class for the Solver's reserved FigureType 0 (Dummy figure); the CNN itself has no empty class \u2014 occupancy is decided upstream",
+    "classOrderNote": "Order follows the Solver's chess convention (2016 User Guide App. B): Bishop(2), Knight(3). The CNN's own class_names use FEN order (knight before bishop) -- the manifest deliberately re-orders so that IS knight resolves to 3, matching the board sprites and legacy abstracts."
   }
 }

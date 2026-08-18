@@ -3,7 +3,11 @@
   "classifierId": "color_classifier",
   "displayName": "Chess Piece Color",
   "kind": "categorical",
-  "classNames": ["white", "black"],
+  "classNames": [
+    "none",
+    "white",
+    "black"
+  ],
   "suggestedPrimitiveTypeName": "FigureColor",
   "checkpointPath": "../../Solver_train/artifacts/color_classifier.pt",
   "inputSpec": {
@@ -18,6 +22,7 @@
     "arch": "resnet18",
     "target": "color",
     "producedBy": "Solver_train/chess_piece_classifier.py",
-    "note": "placeholder — regenerate with `python Solver_train/chess_piece_classifier.py export-vocab --checkpoint Solver_train/artifacts/color_classifier.pt --output-dir classifiers/color_classifier` once the .pt is trained."
+    "note": "placeholder \u2014 regenerate with `python Solver_train/chess_piece_classifier.py export-vocab --checkpoint Solver_train/artifacts/color_classifier.pt --output-dir classifiers/color_classifier` once the .pt is trained.",
+    "syntheticIndex0": "synthetic class for the Solver's reserved FigureColor 0 (DummyColor); the CNN itself has no none class \u2014 occupancy is decided upstream"
   }
 }

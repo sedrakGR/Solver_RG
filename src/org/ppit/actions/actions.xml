@@ -123,6 +123,9 @@
 		<action name="saveSituation" class="org.ppit.actions.situation.SaveSituation" >
             <result name="success">jsp/blackboard.jsp</result>
         </action>
+		<action name="createSituationFromImage" class="org.ppit.actions.situation.CreateSituationFromImage" >
+            <result type="json" />
+        </action>
 		<action name="processSituation" class="org.ppit.actions.situation.ProcessSituation" >
             <result name="success">jsp/blackboard.jsp</result>
         </action>

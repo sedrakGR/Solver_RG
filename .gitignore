@@ -35,12 +35,29 @@ Thumbs.db
 .env
 .env.*
 
-# Solver_train: keep source + docs + manifests; exclude heavy artifacts
+# Solver_train: keep the source, docs, trained checkpoints and the curated
+# dataset that produced them; exclude the venv and the bulk raw corpora.
 Solver_train/venv/
-Solver_train/__pycache__/
 **/__pycache__/
-Solver_train/data/
-Solver_train/artifacts/
 Solver_train/test_output.png
 Solver_train/board_annotated_auto2.png
-Solver_train/*.pt
+
+# 4.9 GB raw corpus (not redistributed). piece_crops/ is the curated 4557-image
+# set the shipped checkpoints were trained on and IS tracked.
+Solver_train/data/*
+!Solver_train/data/piece_crops/
+
+# Intermediate epoch snapshots; the best neighborhood checkpoint is tracked.
+Solver_train/artifacts/neighborhood_detector_epoch*.pt
+
+# 147 MB upstream archive for the prototype (Solver_new_26) classifiers.
+Solver_train/Solver_new_26/data/raw/
+
+# Local working copies - everything of value now lives under Solver_train/.
+/compress_solver/
+/compress_solver.zip
+/NN_Classifier_User_Guide.zip
+
+# Same guide is tracked at doc/12Oct2016 User Guide for SSRGT.docx (uploaded
+# separately); this root copy is a local duplicate.
+/12Oct2016 User Guide for SSRGT.docx

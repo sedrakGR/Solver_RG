@@ -213,11 +213,14 @@ public class Situation {
 		case 1:
 			figureChar='p';
 			break;
+		// NOTE: the Solver's chess convention (2016 User Guide App. B, the board
+		// sprites in ChessSituation.css and the legacy abstracts) is
+		// Bishop(2), Knight(3) -- NOT the FEN letter order. Map accordingly.
 		case 2:
-			figureChar='n';
+			figureChar='b';
 			break;
 		case 3:
-			figureChar='b';
+			figureChar='n';
 			break;
 		case 4:
 			figureChar='r';

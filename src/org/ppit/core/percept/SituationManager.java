@@ -161,6 +161,185 @@ public class SituationManager {
 		return m_library;
 	}
 	
+	/**
+	 * @brief Build a Situation from a chess-board image by shelling out to
+	 *        Solver_train/predict_board.py and mapping the per-cell JSON to
+	 *        IdGroups of NucleusInstances. Mirrors createSituationFromFen but
+	 *        with NN inference instead of a FEN string as the source of truth.
+	 *
+	 *        The predict_board.py output is documented in that file's header
+	 *        comment. Empty cells (occupancy heuristic) emit type="empty",
+	 *        color="none" which we map to integer 0 for both — matching
+	 *        Situation.identifyFigure()'s convention.
+	 *
+	 * @param imagePath path to the source image on disk (any format Pillow
+	 *                  can read).
+	 * @param sitName   optional situation name; if null the image stem is used.
+	 * @return the created Situation, already registered in the library.
+	 */
+	public Situation createSituationFromImage(java.io.File imagePath, String sitName) throws PPITException {
+		if (imagePath == null || !imagePath.isFile()) {
+			throw new PPITException("Image file not found: " + imagePath);
+		}
+
+		// 1. Resolve paths to the python script + checkpoints. We default to
+		// SOLVER_TRAIN_DIR env var, then /opt/solver/Solver_train (the Docker
+		// layout), then the working-dir-relative Solver_train.
+		java.io.File trainDir = resolveSolverTrainDir();
+		java.io.File predictScript = new java.io.File(trainDir, "predict_board.py");
+		java.io.File modelsDir     = new java.io.File(trainDir, "artifacts");
+		if (!predictScript.isFile()) {
+			throw new PPITException("predict_board.py not found at " + predictScript.getAbsolutePath()
+					+ ". Set SOLVER_TRAIN_DIR or place Solver_train next to the webapp.");
+		}
+
+		// 2. Spawn the subprocess.
+		String python = java.util.Optional.ofNullable(System.getenv("SOLVER_PYTHON"))
+				.orElse("python3");
+		java.util.List<String> cmd = new java.util.ArrayList<String>();
+		cmd.add(python);
+		cmd.add(predictScript.getAbsolutePath());
+		cmd.add("--image");        cmd.add(imagePath.getAbsolutePath());
+		cmd.add("--models-dir");   cmd.add(modelsDir.getAbsolutePath());
+		cmd.add("--output");       cmd.add("-");
+		if (sitName != null && !sitName.isEmpty()) {
+			cmd.add("--name"); cmd.add(sitName);
+		}
+
+		ProcessBuilder pb = new ProcessBuilder(cmd);
+		pb.redirectErrorStream(false);
+		String stdout, stderr;
+		int exit;
+		try {
+			Process p = pb.start();
+			stdout = readStream(p.getInputStream());
+			stderr = readStream(p.getErrorStream());
+			exit = p.waitFor();
+		} catch (Exception e) {
+			throw new PPITException("Failed to invoke predict_board.py: " + e.getMessage());
+		}
+		if (exit != 0) {
+			throw new PPITException("predict_board.py exited " + exit + ":\n" + stderr);
+		}
+
+		// 3. Parse JSON output.
+		JSONObject json;
+		try {
+			json = new JSONObject(stdout);
+		} catch (JSONException e) {
+			throw new PPITException("predict_board.py emitted invalid JSON: "
+					+ e.getMessage() + "\nstdout was:\n" + stdout
+					+ "\nstderr was:\n" + stderr);
+		}
+
+		// 4. Build the Situation. Same convention as createSituationFromFen.
+		String name = json.optString("name", "");
+		if (name.isEmpty()) name = (sitName != null) ? sitName : imagePath.getName();
+		Situation situation = new Situation(name);
+
+		PrimitiveType cordXType        = ConceptManager.getInstance().getPrimitiveType("cordX");
+		PrimitiveType cordYType        = ConceptManager.getInstance().getPrimitiveType("cordY");
+		PrimitiveType figureColorType  = ConceptManager.getInstance().getPrimitiveType("FigureColor");
+		PrimitiveType figureTypeType   = ConceptManager.getInstance().getPrimitiveType("FigureType");
+		if (cordXType == null || cordYType == null || figureColorType == null || figureTypeType == null) {
+			throw new PPITException("Required chess nuclei (cordX/cordY/FigureColor/FigureType) "
+					+ "are not registered. Define them in the nucleus editor first.");
+		}
+
+		org.json.JSONArray cells;
+		try { cells = json.getJSONArray("cells"); }
+		catch (JSONException e) { throw new PPITException("predict_board.py JSON missing 'cells' array."); }
+
+		int idCounter = 1;
+		for (int i = 0; i < cells.length(); ++i) {
+			JSONObject cell;
+			try { cell = cells.getJSONObject(i); }
+			catch (JSONException e) { throw new PPITException("Bad cells[" + i + "] entry: " + e.getMessage()); }
+
+			int cordX, cordY, figureInt, colorInt;
+			try {
+				cordX = cell.getInt("x");
+				cordY = cell.getInt("y");
+				String typeName  = cell.getJSONObject("type").getString("name");
+				String colorName = cell.getJSONObject("color").getString("name");
+				figureInt = chessFigureCodeFromName(typeName);
+				colorInt  = chessColorCodeFromName(colorName);
+			} catch (JSONException e) {
+				throw new PPITException("Malformed cell[" + i + "]: " + e.getMessage());
+			}
+
+			IdGroup idgroup = new IdGroup(idCounter++);
+			try {
+				new NucleusInstance(cordX,     cordXType,       idgroup, null);
+				new NucleusInstance(cordY,     cordYType,       idgroup, null);
+				new NucleusInstance(colorInt,  figureColorType, idgroup, null);
+				new NucleusInstance(figureInt, figureTypeType,  idgroup, null);
+				situation.addElement(idgroup);
+			} catch (BrokenCR1 e1) {
+				throw new PPITException("CR1 broken on cell[" + i + "]: " + e1.getMessage());
+			}
+		}
+
+		// 5. Register in the library so existing actions (processSituation, etc.)
+		// can find it by name.
+		m_library.addSituation(situation);
+		m_lastSituationName = situation.getName();
+		return situation;
+	}
+
+	/** Convenience wrapper. */
+	public Situation createSituationFromImage(java.io.File imagePath) throws PPITException {
+		return createSituationFromImage(imagePath, null);
+	}
+
+	private static java.io.File resolveSolverTrainDir() {
+		String env = System.getenv("SOLVER_TRAIN_DIR");
+		if (env != null && !env.isEmpty()) {
+			java.io.File f = new java.io.File(env);
+			if (f.isDirectory()) return f;
+		}
+		java.io.File docker = new java.io.File("/opt/solver/Solver_train");
+		if (docker.isDirectory()) return docker;
+		return new java.io.File("Solver_train");
+	}
+
+	private static String readStream(java.io.InputStream in) throws java.io.IOException {
+		java.io.ByteArrayOutputStream buf = new java.io.ByteArrayOutputStream();
+		byte[] chunk = new byte[4096];
+		int n;
+		while ((n = in.read(chunk)) > 0) buf.write(chunk, 0, n);
+		return buf.toString("UTF-8");
+	}
+
+	/** Map a piece-type class name to the chess integer Solver_RG uses
+	 *  (2016 App. B convention, shared with the board sprites:
+	 *  0=Dummy, 1=Pawn, 2=Bishop, 3=Knight, 4=Rook, 5=Queen, 6=King). */
+	private static int chessFigureCodeFromName(String name) {
+		if (name == null) return 0;
+		switch (name.toLowerCase()) {
+			case "empty":  return 0;
+			case "pawn":   return 1;
+			case "bishop": return 2;
+			case "knight": return 3;
+			case "rook":   return 4;
+			case "queen":  return 5;
+			case "king":   return 6;
+			default:       return 0;
+		}
+	}
+
+	/** Map a color class name to the chess integer Solver_RG uses
+	 *  (0=none/empty, 1=white, 2=black). */
+	private static int chessColorCodeFromName(String name) {
+		if (name == null) return 0;
+		switch (name.toLowerCase()) {
+			case "none":  case "empty": return 0;
+			case "white": return 1;
+			case "black": return 2;
+			default:      return 0;
+		}
+	}
+
 	//TODO: move some part to createSituation
 	public Situation createSituationFromFen(String FENSituation) {
 		//"rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1"

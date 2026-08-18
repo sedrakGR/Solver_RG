@@ -1,0 +1,2695 @@
+{
+  "image": "/home/set/Downloads/092320-provided-carlsentatev.jpg",
+  "output_image": "/home/set/projects/Solver_train/board_annotated_auto.png",
+  "num_regions": 64,
+  "predictions": [
+    {
+      "index": 0,
+      "id": "a8",
+      "box": {
+        "x1": 356,
+        "y1": 33,
+        "x2": 450,
+        "y2": 127
+      },
+      "type": {
+        "label": "knight",
+        "confidence": 0.5558310747146606,
+        "top_k": [
+          {
+            "label": "knight",
+            "confidence": 0.5558310747146606
+          },
+          {
+            "label": "pawn",
+            "confidence": 0.3911474347114563
+          },
+          {
+            "label": "rook",
+            "confidence": 0.045348912477493286
+          }
+        ]
+      },
+      "color": {
+        "label": "white",
+        "confidence": 0.8749816417694092,
+        "top_k": [
+          {
+            "label": "white",
+            "confidence": 0.8749816417694092
+          },
+          {
+            "label": "black",
+            "confidence": 0.1250184029340744
+          }
+        ]
+      }
+    },
+    {
+      "index": 1,
+      "id": "b8",
+      "box": {
+        "x1": 450,
+        "y1": 33,
+        "x2": 545,
+        "y2": 127
+      },
+      "type": {
+        "label": "pawn",
+        "confidence": 0.5947510600090027,
+        "top_k": [
+          {
+            "label": "pawn",
+            "confidence": 0.5947510600090027
+          },
+          {
+            "label": "rook",
+            "confidence": 0.26527830958366394
+          },
+          {
+            "label": "knight",
+            "confidence": 0.07364717125892639
+          }
+        ]
+      },
+      "color": {
+        "label": "white",
+        "confidence": 0.7265611886978149,
+        "top_k": [
+          {
+            "label": "white",
+            "confidence": 0.7265611886978149
+          },
+          {
+            "label": "black",
+            "confidence": 0.27343878149986267
+          }
+        ]
+      }
+    },
+    {
+      "index": 2,
+      "id": "c8",
+      "box": {
+        "x1": 545,
+        "y1": 33,
+        "x2": 640,
+        "y2": 127
+      },
+      "type": {
+        "label": "pawn",
+        "confidence": 0.5269266366958618,
+        "top_k": [
+          {
+            "label": "pawn",
+            "confidence": 0.5269266366958618
+          },
+          {
+            "label": "knight",
+            "confidence": 0.44126254320144653
+          },
+          {
+            "label": "rook",
+            "confidence": 0.024790624156594276
+          }
+        ]
+      },
+      "color": {
+        "label": "white",
+        "confidence": 0.9972207546234131,
+        "top_k": [
+          {
+            "label": "white",
+            "confidence": 0.9972207546234131
+          },
+          {
+            "label": "black",
+            "confidence": 0.0027792036999017
+          }
+        ]
+      }
+    },
+    {
+      "index": 3,
+      "id": "d8",
+      "box": {
+        "x1": 640,
+        "y1": 33,
+        "x2": 735,
+        "y2": 127
+      },
+      "type": {
+        "label": "knight",
+        "confidence": 0.8820856213569641,
+        "top_k": [
+          {
+            "label": "knight",
+            "confidence": 0.8820856213569641
+          },
+          {
+            "label": "pawn",
+            "confidence": 0.06625772267580032
+          },
+          {
+            "label": "queen",
+            "confidence": 0.024738937616348267
+          }
+        ]
+      },
+      "color": {
+        "label": "black",
+        "confidence": 0.999985933303833,
+        "top_k": [
+          {
+            "label": "black",
+            "confidence": 0.999985933303833
+          },
+          {
+            "label": "white",
+            "confidence": 1.4094684956944548e-05
+          }
+        ]
+      }
+    },
+    {
+      "index": 4,
+      "id": "e8",
+      "box": {
+        "x1": 735,
+        "y1": 33,
+        "x2": 829,
+        "y2": 127
+      },
+      "type": {
+        "label": "queen",
+        "confidence": 0.39746809005737305,
+        "top_k": [
+          {
+            "label": "queen",
+            "confidence": 0.39746809005737305
+          },
+          {
+            "label": "king",
+            "confidence": 0.34547659754753113
+          },
+          {
+            "label": "knight",
+            "confidence": 0.13003462553024292
+          }
+        ]
+      },
+      "color": {
+        "label": "black",
+        "confidence": 0.9966992735862732,
+        "top_k": [
+          {
+            "label": "black",
+            "confidence": 0.9966992735862732
+          },
+          {
+            "label": "white",
+            "confidence": 0.003300699405372143
+          }
+        ]
+      }
+    },
+    {
+      "index": 5,
+      "id": "f8",
+      "box": {
+        "x1": 829,
+        "y1": 33,
+        "x2": 924,
+        "y2": 127
+      },
+      "type": {
+        "label": "queen",
+        "confidence": 0.3640749752521515,
+        "top_k": [
+          {
+            "label": "queen",
+            "confidence": 0.3640749752521515
+          },
+          {
+            "label": "rook",
+            "confidence": 0.19302567839622498
+          },
+          {
+            "label": "king",
+            "confidence": 0.1548522561788559
+          }
+        ]
+      },
+      "color": {
+        "label": "black",
+        "confidence": 0.9997819066047668,
+        "top_k": [
+          {
+            "label": "black",
+            "confidence": 0.9997819066047668
+          },
+          {
+            "label": "white",
+            "confidence": 0.00021806108998134732
+          }
+        ]
+      }
+    },
+    {
+      "index": 6,
+      "id": "g8",
+      "box": {
+        "x1": 924,
+        "y1": 33,
+        "x2": 1019,
+        "y2": 127
+      },
+      "type": {
+        "label": "rook",
+        "confidence": 0.6053488850593567,
+        "top_k": [
+          {
+            "label": "rook",
+            "confidence": 0.6053488850593567
+          },
+          {
+            "label": "queen",
+            "confidence": 0.2708359658718109
+          },
+          {
+            "label": "pawn",
+            "confidence": 0.06923989951610565
+          }
+        ]
+      },
+      "color": {
+        "label": "black",
+        "confidence": 0.9999988079071045,
+        "top_k": [
+          {
+            "label": "black",
+            "confidence": 0.9999988079071045
+          },
+          {
+            "label": "white",
+            "confidence": 1.2070938737451797e-06
+          }
+        ]
+      }
+    },
+    {
+      "index": 7,
+      "id": "h8",
+      "box": {
+        "x1": 1019,
+        "y1": 33,
+        "x2": 1114,
+        "y2": 127
+      },
+      "type": {
+        "label": "pawn",
+        "confidence": 0.49428659677505493,
+        "top_k": [
+          {
+            "label": "pawn",
+            "confidence": 0.49428659677505493
+          },
+          {
+            "label": "knight",
+            "confidence": 0.4461140036582947
+          },
+          {
+            "label": "rook",
+            "confidence": 0.029464241117239
+          }
+        ]
+      },
+      "color": {
+        "label": "white",
+        "confidence": 0.9999455213546753,
+        "top_k": [
+          {
+            "label": "white",
+            "confidence": 0.9999455213546753
+          },
+          {
+            "label": "black",
+            "confidence": 5.4417596402345225e-05
+          }
+        ]
+      }
+    },
+    {
+      "index": 8,
+      "id": "a7",
+      "box": {
+        "x1": 356,
+        "y1": 127,
+        "x2": 450,
+        "y2": 222
+      },
+      "type": {
+        "label": "bishop",
+        "confidence": 0.649193286895752,
+        "top_k": [
+          {
+            "label": "bishop",
+            "confidence": 0.649193286895752
+          },
+          {
+            "label": "queen",
+            "confidence": 0.28306272625923157
+          },
+          {
+            "label": "knight",
+            "confidence": 0.026974808424711227
+          }
+        ]
+      },
+      "color": {
+        "label": "black",
+        "confidence": 0.9999033212661743,
+        "top_k": [
+          {
+            "label": "black",
+            "confidence": 0.9999033212661743
+          },
+          {
+            "label": "white",
+            "confidence": 9.670916188042611e-05
+          }
+        ]
+      }
+    },
+    {
+      "index": 9,
+      "id": "b7",
+      "box": {
+        "x1": 450,
+        "y1": 127,
+        "x2": 545,
+        "y2": 222
+      },
+      "type": {
+        "label": "knight",
+        "confidence": 0.992164134979248,
+        "top_k": [
+          {
+            "label": "knight",
+            "confidence": 0.992164134979248
+          },
+          {
+            "label": "pawn",
+            "confidence": 0.004986959509551525
+          },
+          {
+            "label": "bishop",
+            "confidence": 0.0014202643651515245
+          }
+        ]
+      },
+      "color": {
+        "label": "black",
+        "confidence": 0.9997946619987488,
+        "top_k": [
+          {
+            "label": "black",
+            "confidence": 0.9997946619987488
+          },
+          {
+            "label": "white",
+            "confidence": 0.0002053788339253515
+          }
+        ]
+      }
+    },
+    {
+      "index": 10,
+      "id": "c7",
+      "box": {
+        "x1": 545,
+        "y1": 127,
+        "x2": 640,
+        "y2": 222
+      },
+      "type": {
+        "label": "pawn",
+        "confidence": 0.7455735802650452,
+        "top_k": [
+          {
+            "label": "pawn",
+            "confidence": 0.7455735802650452
+          },
+          {
+            "label": "queen",
+            "confidence": 0.19562697410583496
+          },
+          {
+            "label": "bishop",
+            "confidence": 0.033623818308115005
+          }
+        ]
+      },
+      "color": {
+        "label": "white",
+        "confidence": 0.9944370985031128,
+        "top_k": [
+          {
+            "label": "white",
+            "confidence": 0.9944370985031128
+          },
+          {
+            "label": "black",
+            "confidence": 0.005562842823565006
+          }
+        ]
+      }
+    },
+    {
+      "index": 11,
+      "id": "d7",
+      "box": {
+        "x1": 640,
+        "y1": 127,
+        "x2": 735,
+        "y2": 222
+      },
+      "type": {
+        "label": "rook",
+        "confidence": 0.5108169913291931,
+        "top_k": [
+          {
+            "label": "rook",
+            "confidence": 0.5108169913291931
+          },
+          {
+            "label": "king",
+            "confidence": 0.2097652405500412
+          },
+          {
+            "label": "pawn",
+            "confidence": 0.19582155346870422
+          }
+        ]
+      },
+      "color": {
+        "label": "white",
+        "confidence": 0.9506016373634338,
+        "top_k": [
+          {
+            "label": "white",
+            "confidence": 0.9506016373634338
+          },
+          {
+            "label": "black",
+            "confidence": 0.049398332834243774
+          }
+        ]
+      }
+    },
+    {
+      "index": 12,
+      "id": "e7",
+      "box": {
+        "x1": 735,
+        "y1": 127,
+        "x2": 829,
+        "y2": 222
+      },
+      "type": {
+        "label": "rook",
+        "confidence": 0.8552948832511902,
+        "top_k": [
+          {
+            "label": "rook",
+            "confidence": 0.8552948832511902
+          },
+          {
+            "label": "queen",
+            "confidence": 0.05715169385075569
+          },
+          {
+            "label": "pawn",
+            "confidence": 0.04659581929445267
+          }
+        ]
+      },
+      "color": {
+        "label": "white",
+        "confidence": 0.7729409337043762,
+        "top_k": [
+          {
+            "label": "white",
+            "confidence": 0.7729409337043762
+          },
+          {
+            "label": "black",
+            "confidence": 0.22705911099910736
+          }
+        ]
+      }
+    },
+    {
+      "index": 13,
+      "id": "f7",
+      "box": {
+        "x1": 829,
+        "y1": 127,
+        "x2": 924,
+        "y2": 222
+      },
+      "type": {
+        "label": "rook",
+        "confidence": 0.8163276314735413,
+        "top_k": [
+          {
+            "label": "rook",
+            "confidence": 0.8163276314735413
+          },
+          {
+            "label": "king",
+            "confidence": 0.14574827253818512
+          },
+          {
+            "label": "pawn",
+            "confidence": 0.028978588059544563
+          }
+        ]
+      },
+      "color": {
+        "label": "white",
+        "confidence": 0.9843369126319885,
+        "top_k": [
+          {
+            "label": "white",
+            "confidence": 0.9843369126319885
+          },
+          {
+            "label": "black",
+            "confidence": 0.01566299982368946
+          }
+        ]
+      }
+    },
+    {
+      "index": 14,
+      "id": "g7",
+      "box": {
+        "x1": 924,
+        "y1": 127,
+        "x2": 1019,
+        "y2": 222
+      },
+      "type": {
+        "label": "rook",
+        "confidence": 0.6199707388877869,
+        "top_k": [
+          {
+            "label": "rook",
+            "confidence": 0.6199707388877869
+          },
+          {
+            "label": "king",
+            "confidence": 0.15471962094306946
+          },
+          {
+            "label": "bishop",
+            "confidence": 0.12987084686756134
+          }
+        ]
+      },
+      "color": {
+        "label": "black",
+        "confidence": 0.9999357461929321,
+        "top_k": [
+          {
+            "label": "black",
+            "confidence": 0.9999357461929321
+          },
+          {
+            "label": "white",
+            "confidence": 6.429268250940368e-05
+          }
+        ]
+      }
+    },
+    {
+      "index": 15,
+      "id": "h7",
+      "box": {
+        "x1": 1019,
+        "y1": 127,
+        "x2": 1114,
+        "y2": 222
+      },
+      "type": {
+        "label": "pawn",
+        "confidence": 0.9369510412216187,
+        "top_k": [
+          {
+            "label": "pawn",
+            "confidence": 0.9369510412216187
+          },
+          {
+            "label": "queen",
+            "confidence": 0.05795889347791672
+          },
+          {
+            "label": "king",
+            "confidence": 0.0037562288343906403
+          }
+        ]
+      },
+      "color": {
+        "label": "white",
+        "confidence": 0.9626440405845642,
+        "top_k": [
+          {
+            "label": "white",
+            "confidence": 0.9626440405845642
+          },
+          {
+            "label": "black",
+            "confidence": 0.03735599294304848
+          }
+        ]
+      }
+    },
+    {
+      "index": 16,
+      "id": "a6",
+      "box": {
+        "x1": 356,
+        "y1": 222,
+        "x2": 450,
+        "y2": 317
+      },
+      "type": {
+        "label": "bishop",
+        "confidence": 0.7519343495368958,
+        "top_k": [
+          {
+            "label": "bishop",
+            "confidence": 0.7519343495368958
+          },
+          {
+            "label": "queen",
+            "confidence": 0.18124066293239594
+          },
+          {
+            "label": "knight",
+            "confidence": 0.04771186411380768
+          }
+        ]
+      },
+      "color": {
+        "label": "black",
+        "confidence": 0.9998936653137207,
+        "top_k": [
+          {
+            "label": "black",
+            "confidence": 0.9998936653137207
+          },
+          {
+            "label": "white",
+            "confidence": 0.0001062979208654724
+          }
+        ]
+      }
+    },
+    {
+      "index": 17,
+      "id": "b6",
+      "box": {
+        "x1": 450,
+        "y1": 222,
+        "x2": 545,
+        "y2": 317
+      },
+      "type": {
+        "label": "bishop",
+        "confidence": 0.7111993432044983,
+        "top_k": [
+          {
+            "label": "bishop",
+            "confidence": 0.7111993432044983
+          },
+          {
+            "label": "pawn",
+            "confidence": 0.24468454718589783
+          },
+          {
+            "label": "queen",
+            "confidence": 0.021138843148946762
+          }
+        ]
+      },
+      "color": {
+        "label": "black",
+        "confidence": 0.6542123556137085,
+        "top_k": [
+          {
+            "label": "black",
+            "confidence": 0.6542123556137085
+          },
+          {
+            "label": "white",
+            "confidence": 0.34578758478164673
+          }
+        ]
+      }
+    },
+    {
+      "index": 18,
+      "id": "c6",
+      "box": {
+        "x1": 545,
+        "y1": 222,
+        "x2": 640,
+        "y2": 317
+      },
+      "type": {
+        "label": "queen",
+        "confidence": 0.7246057391166687,
+        "top_k": [
+          {
+            "label": "queen",
+            "confidence": 0.7246057391166687
+          },
+          {
+            "label": "pawn",
+            "confidence": 0.17277610301971436
+          },
+          {
+            "label": "king",
+            "confidence": 0.06391087174415588
+          }
+        ]
+      },
+      "color": {
+        "label": "white",
+        "confidence": 0.5546413660049438,
+        "top_k": [
+          {
+            "label": "white",
+            "confidence": 0.5546413660049438
+          },
+          {
+            "label": "black",
+            "confidence": 0.44535866379737854
+          }
+        ]
+      }
+    },
+    {
+      "index": 19,
+      "id": "d6",
+      "box": {
+        "x1": 640,
+        "y1": 222,
+        "x2": 735,
+        "y2": 317
+      },
+      "type": {
+        "label": "rook",
+        "confidence": 0.9539096355438232,
+        "top_k": [
+          {
+            "label": "rook",
+            "confidence": 0.9539096355438232
+          },
+          {
+            "label": "pawn",
+            "confidence": 0.038306936621665955
+          },
+          {
+            "label": "queen",
+            "confidence": 0.004779460374265909
+          }
+        ]
+      },
+      "color": {
+        "label": "black",
+        "confidence": 0.7626745104789734,
+        "top_k": [
+          {
+            "label": "black",
+            "confidence": 0.7626745104789734
+          },
+          {
+            "label": "white",
+            "confidence": 0.2373254895210266
+          }
+        ]
+      }
+    },
+    {
+      "index": 20,
+      "id": "e6",
+      "box": {
+        "x1": 735,
+        "y1": 222,
+        "x2": 829,
+        "y2": 317
+      },
+      "type": {
+        "label": "knight",
+        "confidence": 0.5133019089698792,
+        "top_k": [
+          {
+            "label": "knight",
+            "confidence": 0.5133019089698792
+          },
+          {
+            "label": "pawn",
+            "confidence": 0.4541110694408417
+          },
+          {
+            "label": "queen",
+            "confidence": 0.01878923363983631
+          }
+        ]
+      },
+      "color": {
+        "label": "black",
+        "confidence": 0.964089035987854,
+        "top_k": [
+          {
+            "label": "black",
+            "confidence": 0.964089035987854
+          },
+          {
+            "label": "white",
+            "confidence": 0.03591100871562958
+          }
+        ]
+      }
+    },
+    {
+      "index": 21,
+      "id": "f6",
+      "box": {
+        "x1": 829,
+        "y1": 222,
+        "x2": 924,
+        "y2": 317
+      },
+      "type": {
+        "label": "king",
+        "confidence": 0.29358771443367004,
+        "top_k": [
+          {
+            "label": "king",
+            "confidence": 0.29358771443367004
+          },
+          {
+            "label": "knight",
+            "confidence": 0.2255866974592209
+          },
+          {
+            "label": "bishop",
+            "confidence": 0.19423232972621918
+          }
+        ]
+      },
+      "color": {
+        "label": "white",
+        "confidence": 0.9999451637268066,
+        "top_k": [
+          {
+            "label": "white",
+            "confidence": 0.9999451637268066
+          },
+          {
+            "label": "black",
+            "confidence": 5.48096104466822e-05
+          }
+        ]
+      }
+    },
+    {
+      "index": 22,
+      "id": "g6",
+      "box": {
+        "x1": 924,
+        "y1": 222,
+        "x2": 1019,
+        "y2": 317
+      },
+      "type": {
+        "label": "rook",
+        "confidence": 0.9977693557739258,
+        "top_k": [
+          {
+            "label": "rook",
+            "confidence": 0.9977693557739258
+          },
+          {
+            "label": "bishop",
+            "confidence": 0.001210667542181909
+          },
+          {
+            "label": "king",
+            "confidence": 0.0009878495475277305
+          }
+        ]
+      },
+      "color": {
+        "label": "black",
+        "confidence": 0.9999970197677612,
+        "top_k": [
+          {
+            "label": "black",
+            "confidence": 0.9999970197677612
+          },
+          {
+            "label": "white",
+            "confidence": 2.9393306704150746e-06
+          }
+        ]
+      }
+    },
+    {
+      "index": 23,
+      "id": "h6",
+      "box": {
+        "x1": 1019,
+        "y1": 222,
+        "x2": 1114,
+        "y2": 317
+      },
+      "type": {
+        "label": "king",
+        "confidence": 0.3697478175163269,
+        "top_k": [
+          {
+            "label": "king",
+            "confidence": 0.3697478175163269
+          },
+          {
+            "label": "bishop",
+            "confidence": 0.2535063624382019
+          },
+          {
+            "label": "rook",
+            "confidence": 0.23112669587135315
+          }
+        ]
+      },
+      "color": {
+        "label": "white",
+        "confidence": 0.9994435906410217,
+        "top_k": [
+          {
+            "label": "white",
+            "confidence": 0.9994435906410217
+          },
+          {
+            "label": "black",
+            "confidence": 0.0005563963204622269
+          }
+        ]
+      }
+    },
+    {
+      "index": 24,
+      "id": "a5",
+      "box": {
+        "x1": 356,
+        "y1": 317,
+        "x2": 450,
+        "y2": 412
+      },
+      "type": {
+        "label": "bishop",
+        "confidence": 0.9748601317405701,
+        "top_k": [
+          {
+            "label": "bishop",
+            "confidence": 0.9748601317405701
+          },
+          {
+            "label": "knight",
+            "confidence": 0.011841501109302044
+          },
+          {
+            "label": "queen",
+            "confidence": 0.006559125613421202
+          }
+        ]
+      },
+      "color": {
+        "label": "black",
+        "confidence": 0.9997778534889221,
+        "top_k": [
+          {
+            "label": "black",
+            "confidence": 0.9997778534889221
+          },
+          {
+            "label": "white",
+            "confidence": 0.00022214019554667175
+          }
+        ]
+      }
+    },
+    {
+      "index": 25,
+      "id": "b5",
+      "box": {
+        "x1": 450,
+        "y1": 317,
+        "x2": 545,
+        "y2": 412
+      },
+      "type": {
+        "label": "rook",
+        "confidence": 0.6302679777145386,
+        "top_k": [
+          {
+            "label": "rook",
+            "confidence": 0.6302679777145386
+          },
+          {
+            "label": "pawn",
+            "confidence": 0.127376988530159
+          },
+          {
+            "label": "queen",
+            "confidence": 0.12351211905479431
+          }
+        ]
+      },
+      "color": {
+        "label": "white",
+        "confidence": 0.9998570680618286,
+        "top_k": [
+          {
+            "label": "white",
+            "confidence": 0.9998570680618286
+          },
+          {
+            "label": "black",
+            "confidence": 0.00014288864622358233
+          }
+        ]
+      }
+    },
+    {
+      "index": 26,
+      "id": "c5",
+      "box": {
+        "x1": 545,
+        "y1": 317,
+        "x2": 640,
+        "y2": 412
+      },
+      "type": {
+        "label": "pawn",
+        "confidence": 0.46258923411369324,
+        "top_k": [
+          {
+            "label": "pawn",
+            "confidence": 0.46258923411369324
+          },
+          {
+            "label": "rook",
+            "confidence": 0.35041341185569763
+          },
+          {
+            "label": "bishop",
+            "confidence": 0.16945752501487732
+          }
+        ]
+      },
+      "color": {
+        "label": "black",
+        "confidence": 0.7869566679000854,
+        "top_k": [
+          {
+            "label": "black",
+            "confidence": 0.7869566679000854
+          },
+          {
+            "label": "white",
+            "confidence": 0.21304328739643097
+          }
+        ]
+      }
+    },
+    {
+      "index": 27,
+      "id": "d5",
+      "box": {
+        "x1": 640,
+        "y1": 317,
+        "x2": 735,
+        "y2": 412
+      },
+      "type": {
+        "label": "rook",
+        "confidence": 0.45153042674064636,
+        "top_k": [
+          {
+            "label": "rook",
+            "confidence": 0.45153042674064636
+          },
+          {
+            "label": "queen",
+            "confidence": 0.2720590829849243
+          },
+          {
+            "label": "pawn",
+            "confidence": 0.24463613331317902
+          }
+        ]
+      },
+      "color": {
+        "label": "white",
+        "confidence": 0.9944087862968445,
+        "top_k": [
+          {
+            "label": "white",
+            "confidence": 0.9944087862968445
+          },
+          {
+            "label": "black",
+            "confidence": 0.005591239780187607
+          }
+        ]
+      }
+    },
+    {
+      "index": 28,
+      "id": "e5",
+      "box": {
+        "x1": 735,
+        "y1": 317,
+        "x2": 829,
+        "y2": 412
+      },
+      "type": {
+        "label": "knight",
+        "confidence": 0.8915886282920837,
+        "top_k": [
+          {
+            "label": "knight",
+            "confidence": 0.8915886282920837
+          },
+          {
+            "label": "queen",
+            "confidence": 0.061668772250413895
+          },
+          {
+            "label": "pawn",
+            "confidence": 0.03841200843453407
+          }
+        ]
+      },
+      "color": {
+        "label": "white",
+        "confidence": 0.99628084897995,
+        "top_k": [
+          {
+            "label": "white",
+            "confidence": 0.99628084897995
+          },
+          {
+            "label": "black",
+            "confidence": 0.003719138680025935
+          }
+        ]
+      }
+    },
+    {
+      "index": 29,
+      "id": "f5",
+      "box": {
+        "x1": 829,
+        "y1": 317,
+        "x2": 924,
+        "y2": 412
+      },
+      "type": {
+        "label": "queen",
+        "confidence": 0.6003267168998718,
+        "top_k": [
+          {
+            "label": "queen",
+            "confidence": 0.6003267168998718
+          },
+          {
+            "label": "pawn",
+            "confidence": 0.24750375747680664
+          },
+          {
+            "label": "rook",
+            "confidence": 0.06953471153974533
+          }
+        ]
+      },
+      "color": {
+        "label": "white",
+        "confidence": 0.9999855756759644,
+        "top_k": [
+          {
+            "label": "white",
+            "confidence": 0.9999855756759644
+          },
+          {
+            "label": "black",
+            "confidence": 1.4373138583323453e-05
+          }
+        ]
+      }
+    },
+    {
+      "index": 30,
+      "id": "g5",
+      "box": {
+        "x1": 924,
+        "y1": 317,
+        "x2": 1019,
+        "y2": 412
+      },
+      "type": {
+        "label": "pawn",
+        "confidence": 0.5158159136772156,
+        "top_k": [
+          {
+            "label": "pawn",
+            "confidence": 0.5158159136772156
+          },
+          {
+            "label": "queen",
+            "confidence": 0.21913164854049683
+          },
+          {
+            "label": "rook",
+            "confidence": 0.1269792914390564
+          }
+        ]
+      },
+      "color": {
+        "label": "white",
+        "confidence": 0.9848217368125916,
+        "top_k": [
+          {
+            "label": "white",
+            "confidence": 0.9848217368125916
+          },
+          {
+            "label": "black",
+            "confidence": 0.015178297646343708
+          }
+        ]
+      }
+    },
+    {
+      "index": 31,
+      "id": "h5",
+      "box": {
+        "x1": 1019,
+        "y1": 317,
+        "x2": 1114,
+        "y2": 412
+      },
+      "type": {
+        "label": "bishop",
+        "confidence": 0.29069480299949646,
+        "top_k": [
+          {
+            "label": "bishop",
+            "confidence": 0.29069480299949646
+          },
+          {
+            "label": "king",
+            "confidence": 0.25832319259643555
+          },
+          {
+            "label": "rook",
+            "confidence": 0.18509072065353394
+          }
+        ]
+      },
+      "color": {
+        "label": "white",
+        "confidence": 0.9998849630355835,
+        "top_k": [
+          {
+            "label": "white",
+            "confidence": 0.9998849630355835
+          },
+          {
+            "label": "black",
+            "confidence": 0.00011502799316076562
+          }
+        ]
+      }
+    },
+    {
+      "index": 32,
+      "id": "a4",
+      "box": {
+        "x1": 356,
+        "y1": 412,
+        "x2": 450,
+        "y2": 506
+      },
+      "type": {
+        "label": "rook",
+        "confidence": 0.8810151815414429,
+        "top_k": [
+          {
+            "label": "rook",
+            "confidence": 0.8810151815414429
+          },
+          {
+            "label": "pawn",
+            "confidence": 0.08126639574766159
+          },
+          {
+            "label": "knight",
+            "confidence": 0.015202982351183891
+          }
+        ]
+      },
+      "color": {
+        "label": "white",
+        "confidence": 0.9999644756317139,
+        "top_k": [
+          {
+            "label": "white",
+            "confidence": 0.9999644756317139
+          },
+          {
+            "label": "black",
+            "confidence": 3.551873305696063e-05
+          }
+        ]
+      }
+    },
+    {
+      "index": 33,
+      "id": "b4",
+      "box": {
+        "x1": 450,
+        "y1": 412,
+        "x2": 545,
+        "y2": 506
+      },
+      "type": {
+        "label": "rook",
+        "confidence": 0.4446835219860077,
+        "top_k": [
+          {
+            "label": "rook",
+            "confidence": 0.4446835219860077
+          },
+          {
+            "label": "queen",
+            "confidence": 0.29079893231391907
+          },
+          {
+            "label": "pawn",
+            "confidence": 0.15860357880592346
+          }
+        ]
+      },
+      "color": {
+        "label": "white",
+        "confidence": 0.9999499320983887,
+        "top_k": [
+          {
+            "label": "white",
+            "confidence": 0.9999499320983887
+          },
+          {
+            "label": "black",
+            "confidence": 5.007376603316516e-05
+          }
+        ]
+      }
+    },
+    {
+      "index": 34,
+      "id": "c4",
+      "box": {
+        "x1": 545,
+        "y1": 412,
+        "x2": 640,
+        "y2": 506
+      },
+      "type": {
+        "label": "rook",
+        "confidence": 0.43296149373054504,
+        "top_k": [
+          {
+            "label": "rook",
+            "confidence": 0.43296149373054504
+          },
+          {
+            "label": "queen",
+            "confidence": 0.4171983301639557
+          },
+          {
+            "label": "pawn",
+            "confidence": 0.1170637384057045
+          }
+        ]
+      },
+      "color": {
+        "label": "white",
+        "confidence": 0.9999630451202393,
+        "top_k": [
+          {
+            "label": "white",
+            "confidence": 0.9999630451202393
+          },
+          {
+            "label": "black",
+            "confidence": 3.6947538319509476e-05
+          }
+        ]
+      }
+    },
+    {
+      "index": 35,
+      "id": "d4",
+      "box": {
+        "x1": 640,
+        "y1": 412,
+        "x2": 735,
+        "y2": 506
+      },
+      "type": {
+        "label": "queen",
+        "confidence": 0.5552498698234558,
+        "top_k": [
+          {
+            "label": "queen",
+            "confidence": 0.5552498698234558
+          },
+          {
+            "label": "pawn",
+            "confidence": 0.1760534644126892
+          },
+          {
+            "label": "knight",
+            "confidence": 0.10932346433401108
+          }
+        ]
+      },
+      "color": {
+        "label": "white",
+        "confidence": 0.9928309917449951,
+        "top_k": [
+          {
+            "label": "white",
+            "confidence": 0.9928309917449951
+          },
+          {
+            "label": "black",
+            "confidence": 0.007168924901634455
+          }
+        ]
+      }
+    },
+    {
+      "index": 36,
+      "id": "e4",
+      "box": {
+        "x1": 735,
+        "y1": 412,
+        "x2": 829,
+        "y2": 506
+      },
+      "type": {
+        "label": "pawn",
+        "confidence": 0.4516025185585022,
+        "top_k": [
+          {
+            "label": "pawn",
+            "confidence": 0.4516025185585022
+          },
+          {
+            "label": "queen",
+            "confidence": 0.30226919054985046
+          },
+          {
+            "label": "rook",
+            "confidence": 0.14798660576343536
+          }
+        ]
+      },
+      "color": {
+        "label": "white",
+        "confidence": 0.999902606010437,
+        "top_k": [
+          {
+            "label": "white",
+            "confidence": 0.999902606010437
+          },
+          {
+            "label": "black",
+            "confidence": 9.739548113429919e-05
+          }
+        ]
+      }
+    },
+    {
+      "index": 37,
+      "id": "f4",
+      "box": {
+        "x1": 829,
+        "y1": 412,
+        "x2": 924,
+        "y2": 506
+      },
+      "type": {
+        "label": "pawn",
+        "confidence": 0.3598594665527344,
+        "top_k": [
+          {
+            "label": "pawn",
+            "confidence": 0.3598594665527344
+          },
+          {
+            "label": "queen",
+            "confidence": 0.324076771736145
+          },
+          {
+            "label": "rook",
+            "confidence": 0.20119531452655792
+          }
+        ]
+      },
+      "color": {
+        "label": "white",
+        "confidence": 0.9998657703399658,
+        "top_k": [
+          {
+            "label": "white",
+            "confidence": 0.9998657703399658
+          },
+          {
+            "label": "black",
+            "confidence": 0.000134184374473989
+          }
+        ]
+      }
+    },
+    {
+      "index": 38,
+      "id": "g4",
+      "box": {
+        "x1": 924,
+        "y1": 412,
+        "x2": 1019,
+        "y2": 506
+      },
+      "type": {
+        "label": "pawn",
+        "confidence": 0.5734175443649292,
+        "top_k": [
+          {
+            "label": "pawn",
+            "confidence": 0.5734175443649292
+          },
+          {
+            "label": "queen",
+            "confidence": 0.21653413772583008
+          },
+          {
+            "label": "rook",
+            "confidence": 0.13167978823184967
+          }
+        ]
+      },
+      "color": {
+        "label": "white",
+        "confidence": 0.9998641014099121,
+        "top_k": [
+          {
+            "label": "white",
+            "confidence": 0.9998641014099121
+          },
+          {
+            "label": "black",
+            "confidence": 0.00013589151785708964
+          }
+        ]
+      }
+    },
+    {
+      "index": 39,
+      "id": "h4",
+      "box": {
+        "x1": 1019,
+        "y1": 412,
+        "x2": 1114,
+        "y2": 506
+      },
+      "type": {
+        "label": "queen",
+        "confidence": 0.7888358235359192,
+        "top_k": [
+          {
+            "label": "queen",
+            "confidence": 0.7888358235359192
+          },
+          {
+            "label": "knight",
+            "confidence": 0.11524371802806854
+          },
+          {
+            "label": "king",
+            "confidence": 0.04281604662537575
+          }
+        ]
+      },
+      "color": {
+        "label": "white",
+        "confidence": 0.9999672174453735,
+        "top_k": [
+          {
+            "label": "white",
+            "confidence": 0.9999672174453735
+          },
+          {
+            "label": "black",
+            "confidence": 3.276192001067102e-05
+          }
+        ]
+      }
+    },
+    {
+      "index": 40,
+      "id": "a3",
+      "box": {
+        "x1": 356,
+        "y1": 506,
+        "x2": 450,
+        "y2": 601
+      },
+      "type": {
+        "label": "pawn",
+        "confidence": 0.990225613117218,
+        "top_k": [
+          {
+            "label": "pawn",
+            "confidence": 0.990225613117218
+          },
+          {
+            "label": "knight",
+            "confidence": 0.006457333918660879
+          },
+          {
+            "label": "king",
+            "confidence": 0.0012959953164681792
+          }
+        ]
+      },
+      "color": {
+        "label": "white",
+        "confidence": 0.9998182654380798,
+        "top_k": [
+          {
+            "label": "white",
+            "confidence": 0.9998182654380798
+          },
+          {
+            "label": "black",
+            "confidence": 0.00018180998449679464
+          }
+        ]
+      }
+    },
+    {
+      "index": 41,
+      "id": "b3",
+      "box": {
+        "x1": 450,
+        "y1": 506,
+        "x2": 545,
+        "y2": 601
+      },
+      "type": {
+        "label": "knight",
+        "confidence": 0.6166588664054871,
+        "top_k": [
+          {
+            "label": "knight",
+            "confidence": 0.6166588664054871
+          },
+          {
+            "label": "pawn",
+            "confidence": 0.29832303524017334
+          },
+          {
+            "label": "king",
+            "confidence": 0.05782609432935715
+          }
+        ]
+      },
+      "color": {
+        "label": "white",
+        "confidence": 0.9999802112579346,
+        "top_k": [
+          {
+            "label": "white",
+            "confidence": 0.9999802112579346
+          },
+          {
+            "label": "black",
+            "confidence": 1.980641536647454e-05
+          }
+        ]
+      }
+    },
+    {
+      "index": 42,
+      "id": "c3",
+      "box": {
+        "x1": 545,
+        "y1": 506,
+        "x2": 640,
+        "y2": 601
+      },
+      "type": {
+        "label": "queen",
+        "confidence": 0.7286719679832458,
+        "top_k": [
+          {
+            "label": "queen",
+            "confidence": 0.7286719679832458
+          },
+          {
+            "label": "pawn",
+            "confidence": 0.2504626512527466
+          },
+          {
+            "label": "bishop",
+            "confidence": 0.017364241182804108
+          }
+        ]
+      },
+      "color": {
+        "label": "white",
+        "confidence": 0.997951328754425,
+        "top_k": [
+          {
+            "label": "white",
+            "confidence": 0.997951328754425
+          },
+          {
+            "label": "black",
+            "confidence": 0.0020487401634454727
+          }
+        ]
+      }
+    },
+    {
+      "index": 43,
+      "id": "d3",
+      "box": {
+        "x1": 640,
+        "y1": 506,
+        "x2": 735,
+        "y2": 601
+      },
+      "type": {
+        "label": "pawn",
+        "confidence": 0.50785231590271,
+        "top_k": [
+          {
+            "label": "pawn",
+            "confidence": 0.50785231590271
+          },
+          {
+            "label": "rook",
+            "confidence": 0.21144352853298187
+          },
+          {
+            "label": "queen",
+            "confidence": 0.16863562166690826
+          }
+        ]
+      },
+      "color": {
+        "label": "white",
+        "confidence": 0.9996657371520996,
+        "top_k": [
+          {
+            "label": "white",
+            "confidence": 0.9996657371520996
+          },
+          {
+            "label": "black",
+            "confidence": 0.000334220880176872
+          }
+        ]
+      }
+    },
+    {
+      "index": 44,
+      "id": "e3",
+      "box": {
+        "x1": 735,
+        "y1": 506,
+        "x2": 829,
+        "y2": 601
+      },
+      "type": {
+        "label": "queen",
+        "confidence": 0.3679403066635132,
+        "top_k": [
+          {
+            "label": "queen",
+            "confidence": 0.3679403066635132
+          },
+          {
+            "label": "knight",
+            "confidence": 0.2834644615650177
+          },
+          {
+            "label": "pawn",
+            "confidence": 0.20854142308235168
+          }
+        ]
+      },
+      "color": {
+        "label": "black",
+        "confidence": 0.8880923986434937,
+        "top_k": [
+          {
+            "label": "black",
+            "confidence": 0.8880923986434937
+          },
+          {
+            "label": "white",
+            "confidence": 0.11190757155418396
+          }
+        ]
+      }
+    },
+    {
+      "index": 45,
+      "id": "f3",
+      "box": {
+        "x1": 829,
+        "y1": 506,
+        "x2": 924,
+        "y2": 601
+      },
+      "type": {
+        "label": "knight",
+        "confidence": 0.929697573184967,
+        "top_k": [
+          {
+            "label": "knight",
+            "confidence": 0.929697573184967
+          },
+          {
+            "label": "pawn",
+            "confidence": 0.06331907957792282
+          },
+          {
+            "label": "rook",
+            "confidence": 0.006450413726270199
+          }
+        ]
+      },
+      "color": {
+        "label": "black",
+        "confidence": 0.9887719750404358,
+        "top_k": [
+          {
+            "label": "black",
+            "confidence": 0.9887719750404358
+          },
+          {
+            "label": "white",
+            "confidence": 0.01122797280550003
+          }
+        ]
+      }
+    },
+    {
+      "index": 46,
+      "id": "g3",
+      "box": {
+        "x1": 924,
+        "y1": 506,
+        "x2": 1019,
+        "y2": 601
+      },
+      "type": {
+        "label": "queen",
+        "confidence": 0.4678960144519806,
+        "top_k": [
+          {
+            "label": "queen",
+            "confidence": 0.4678960144519806
+          },
+          {
+            "label": "pawn",
+            "confidence": 0.3655768036842346
+          },
+          {
+            "label": "rook",
+            "confidence": 0.09094732254743576
+          }
+        ]
+      },
+      "color": {
+        "label": "white",
+        "confidence": 0.9998346567153931,
+        "top_k": [
+          {
+            "label": "white",
+            "confidence": 0.9998346567153931
+          },
+          {
+            "label": "black",
+            "confidence": 0.0001653398503549397
+          }
+        ]
+      }
+    },
+    {
+      "index": 47,
+      "id": "h3",
+      "box": {
+        "x1": 1019,
+        "y1": 506,
+        "x2": 1114,
+        "y2": 601
+      },
+      "type": {
+        "label": "pawn",
+        "confidence": 0.48809173703193665,
+        "top_k": [
+          {
+            "label": "pawn",
+            "confidence": 0.48809173703193665
+          },
+          {
+            "label": "rook",
+            "confidence": 0.2543310821056366
+          },
+          {
+            "label": "queen",
+            "confidence": 0.17397674918174744
+          }
+        ]
+      },
+      "color": {
+        "label": "white",
+        "confidence": 0.9999659061431885,
+        "top_k": [
+          {
+            "label": "white",
+            "confidence": 0.9999659061431885
+          },
+          {
+            "label": "black",
+            "confidence": 3.408753400435671e-05
+          }
+        ]
+      }
+    },
+    {
+      "index": 48,
+      "id": "a2",
+      "box": {
+        "x1": 356,
+        "y1": 601,
+        "x2": 450,
+        "y2": 696
+      },
+      "type": {
+        "label": "king",
+        "confidence": 0.9724279642105103,
+        "top_k": [
+          {
+            "label": "king",
+            "confidence": 0.9724279642105103
+          },
+          {
+            "label": "bishop",
+            "confidence": 0.015679942443966866
+          },
+          {
+            "label": "knight",
+            "confidence": 0.008954372256994247
+          }
+        ]
+      },
+      "color": {
+        "label": "white",
+        "confidence": 0.9999818801879883,
+        "top_k": [
+          {
+            "label": "white",
+            "confidence": 0.9999818801879883
+          },
+          {
+            "label": "black",
+            "confidence": 1.807917760743294e-05
+          }
+        ]
+      }
+    },
+    {
+      "index": 49,
+      "id": "b2",
+      "box": {
+        "x1": 450,
+        "y1": 601,
+        "x2": 545,
+        "y2": 696
+      },
+      "type": {
+        "label": "knight",
+        "confidence": 0.962775468826294,
+        "top_k": [
+          {
+            "label": "knight",
+            "confidence": 0.962775468826294
+          },
+          {
+            "label": "pawn",
+            "confidence": 0.03607349097728729
+          },
+          {
+            "label": "king",
+            "confidence": 0.0007303616148419678
+          }
+        ]
+      },
+      "color": {
+        "label": "white",
+        "confidence": 0.9999635219573975,
+        "top_k": [
+          {
+            "label": "white",
+            "confidence": 0.9999635219573975
+          },
+          {
+            "label": "black",
+            "confidence": 3.649983409559354e-05
+          }
+        ]
+      }
+    },
+    {
+      "index": 50,
+      "id": "c2",
+      "box": {
+        "x1": 545,
+        "y1": 601,
+        "x2": 640,
+        "y2": 696
+      },
+      "type": {
+        "label": "queen",
+        "confidence": 0.5748875737190247,
+        "top_k": [
+          {
+            "label": "queen",
+            "confidence": 0.5748875737190247
+          },
+          {
+            "label": "pawn",
+            "confidence": 0.2911645472049713
+          },
+          {
+            "label": "rook",
+            "confidence": 0.06718096137046814
+          }
+        ]
+      },
+      "color": {
+        "label": "white",
+        "confidence": 0.997383177280426,
+        "top_k": [
+          {
+            "label": "white",
+            "confidence": 0.997383177280426
+          },
+          {
+            "label": "black",
+            "confidence": 0.002616792218759656
+          }
+        ]
+      }
+    },
+    {
+      "index": 51,
+      "id": "d2",
+      "box": {
+        "x1": 640,
+        "y1": 601,
+        "x2": 735,
+        "y2": 696
+      },
+      "type": {
+        "label": "rook",
+        "confidence": 0.9989726543426514,
+        "top_k": [
+          {
+            "label": "rook",
+            "confidence": 0.9989726543426514
+          },
+          {
+            "label": "pawn",
+            "confidence": 0.0005919650429859757
+          },
+          {
+            "label": "king",
+            "confidence": 0.00033082577283494174
+          }
+        ]
+      },
+      "color": {
+        "label": "white",
+        "confidence": 0.8419632911682129,
+        "top_k": [
+          {
+            "label": "white",
+            "confidence": 0.8419632911682129
+          },
+          {
+            "label": "black",
+            "confidence": 0.15803678333759308
+          }
+        ]
+      }
+    },
+    {
+      "index": 52,
+      "id": "e2",
+      "box": {
+        "x1": 735,
+        "y1": 601,
+        "x2": 829,
+        "y2": 696
+      },
+      "type": {
+        "label": "pawn",
+        "confidence": 0.9996047616004944,
+        "top_k": [
+          {
+            "label": "pawn",
+            "confidence": 0.9996047616004944
+          },
+          {
+            "label": "king",
+            "confidence": 0.00016590987797826529
+          },
+          {
+            "label": "knight",
+            "confidence": 9.172844147542492e-05
+          }
+        ]
+      },
+      "color": {
+        "label": "black",
+        "confidence": 0.9933649301528931,
+        "top_k": [
+          {
+            "label": "black",
+            "confidence": 0.9933649301528931
+          },
+          {
+            "label": "white",
+            "confidence": 0.006635104306042194
+          }
+        ]
+      }
+    },
+    {
+      "index": 53,
+      "id": "f2",
+      "box": {
+        "x1": 829,
+        "y1": 601,
+        "x2": 924,
+        "y2": 696
+      },
+      "type": {
+        "label": "rook",
+        "confidence": 0.6029176712036133,
+        "top_k": [
+          {
+            "label": "rook",
+            "confidence": 0.6029176712036133
+          },
+          {
+            "label": "queen",
+            "confidence": 0.1809675246477127
+          },
+          {
+            "label": "knight",
+            "confidence": 0.10941936820745468
+          }
+        ]
+      },
+      "color": {
+        "label": "white",
+        "confidence": 0.648953914642334,
+        "top_k": [
+          {
+            "label": "white",
+            "confidence": 0.648953914642334
+          },
+          {
+            "label": "black",
+            "confidence": 0.351046085357666
+          }
+        ]
+      }
+    },
+    {
+      "index": 54,
+      "id": "g2",
+      "box": {
+        "x1": 924,
+        "y1": 601,
+        "x2": 1019,
+        "y2": 696
+      },
+      "type": {
+        "label": "rook",
+        "confidence": 0.5246432423591614,
+        "top_k": [
+          {
+            "label": "rook",
+            "confidence": 0.5246432423591614
+          },
+          {
+            "label": "bishop",
+            "confidence": 0.2649150788784027
+          },
+          {
+            "label": "queen",
+            "confidence": 0.13516421616077423
+          }
+        ]
+      },
+      "color": {
+        "label": "black",
+        "confidence": 0.990079402923584,
+        "top_k": [
+          {
+            "label": "black",
+            "confidence": 0.990079402923584
+          },
+          {
+            "label": "white",
+            "confidence": 0.009920566342771053
+          }
+        ]
+      }
+    },
+    {
+      "index": 55,
+      "id": "h2",
+      "box": {
+        "x1": 1019,
+        "y1": 601,
+        "x2": 1114,
+        "y2": 696
+      },
+      "type": {
+        "label": "pawn",
+        "confidence": 0.47893059253692627,
+        "top_k": [
+          {
+            "label": "pawn",
+            "confidence": 0.47893059253692627
+          },
+          {
+            "label": "queen",
+            "confidence": 0.2866463363170624
+          },
+          {
+            "label": "rook",
+            "confidence": 0.14708924293518066
+          }
+        ]
+      },
+      "color": {
+        "label": "white",
+        "confidence": 0.999848484992981,
+        "top_k": [
+          {
+            "label": "white",
+            "confidence": 0.999848484992981
+          },
+          {
+            "label": "black",
+            "confidence": 0.0001514414034318179
+          }
+        ]
+      }
+    },
+    {
+      "index": 56,
+      "id": "a1",
+      "box": {
+        "x1": 356,
+        "y1": 696,
+        "x2": 450,
+        "y2": 791
+      },
+      "type": {
+        "label": "pawn",
+        "confidence": 0.40276768803596497,
+        "top_k": [
+          {
+            "label": "pawn",
+            "confidence": 0.40276768803596497
+          },
+          {
+            "label": "rook",
+            "confidence": 0.31674936413764954
+          },
+          {
+            "label": "queen",
+            "confidence": 0.168192058801651
+          }
+        ]
+      },
+      "color": {
+        "label": "white",
+        "confidence": 0.9912646412849426,
+        "top_k": [
+          {
+            "label": "white",
+            "confidence": 0.9912646412849426
+          },
+          {
+            "label": "black",
+            "confidence": 0.008735365234315395
+          }
+        ]
+      }
+    },
+    {
+      "index": 57,
+      "id": "b1",
+      "box": {
+        "x1": 450,
+        "y1": 696,
+        "x2": 545,
+        "y2": 791
+      },
+      "type": {
+        "label": "queen",
+        "confidence": 0.9912906885147095,
+        "top_k": [
+          {
+            "label": "queen",
+            "confidence": 0.9912906885147095
+          },
+          {
+            "label": "pawn",
+            "confidence": 0.0062546273693442345
+          },
+          {
+            "label": "rook",
+            "confidence": 0.002024856163188815
+          }
+        ]
+      },
+      "color": {
+        "label": "white",
+        "confidence": 0.9987587928771973,
+        "top_k": [
+          {
+            "label": "white",
+            "confidence": 0.9987587928771973
+          },
+          {
+            "label": "black",
+            "confidence": 0.0012411611387506127
+          }
+        ]
+      }
+    },
+    {
+      "index": 58,
+      "id": "c1",
+      "box": {
+        "x1": 545,
+        "y1": 696,
+        "x2": 640,
+        "y2": 791
+      },
+      "type": {
+        "label": "pawn",
+        "confidence": 0.4076463580131531,
+        "top_k": [
+          {
+            "label": "pawn",
+            "confidence": 0.4076463580131531
+          },
+          {
+            "label": "rook",
+            "confidence": 0.2702504098415375
+          },
+          {
+            "label": "queen",
+            "confidence": 0.249341681599617
+          }
+        ]
+      },
+      "color": {
+        "label": "white",
+        "confidence": 0.5309680104255676,
+        "top_k": [
+          {
+            "label": "white",
+            "confidence": 0.5309680104255676
+          },
+          {
+            "label": "black",
+            "confidence": 0.4690319895744324
+          }
+        ]
+      }
+    },
+    {
+      "index": 59,
+      "id": "d1",
+      "box": {
+        "x1": 640,
+        "y1": 696,
+        "x2": 735,
+        "y2": 791
+      },
+      "type": {
+        "label": "rook",
+        "confidence": 0.3768739402294159,
+        "top_k": [
+          {
+            "label": "rook",
+            "confidence": 0.3768739402294159
+          },
+          {
+            "label": "pawn",
+            "confidence": 0.28567421436309814
+          },
+          {
+            "label": "queen",
+            "confidence": 0.23367954790592194
+          }
+        ]
+      },
+      "color": {
+        "label": "white",
+        "confidence": 0.9943349361419678,
+        "top_k": [
+          {
+            "label": "white",
+            "confidence": 0.9943349361419678
+          },
+          {
+            "label": "black",
+            "confidence": 0.005665138363838196
+          }
+        ]
+      }
+    },
+    {
+      "index": 60,
+      "id": "e1",
+      "box": {
+        "x1": 735,
+        "y1": 696,
+        "x2": 829,
+        "y2": 791
+      },
+      "type": {
+        "label": "rook",
+        "confidence": 0.8978612422943115,
+        "top_k": [
+          {
+            "label": "rook",
+            "confidence": 0.8978612422943115
+          },
+          {
+            "label": "queen",
+            "confidence": 0.07168375700712204
+          },
+          {
+            "label": "pawn",
+            "confidence": 0.02642570436000824
+          }
+        ]
+      },
+      "color": {
+        "label": "black",
+        "confidence": 0.858351469039917,
+        "top_k": [
+          {
+            "label": "black",
+            "confidence": 0.858351469039917
+          },
+          {
+            "label": "white",
+            "confidence": 0.141648530960083
+          }
+        ]
+      }
+    },
+    {
+      "index": 61,
+      "id": "f1",
+      "box": {
+        "x1": 829,
+        "y1": 696,
+        "x2": 924,
+        "y2": 791
+      },
+      "type": {
+        "label": "pawn",
+        "confidence": 0.44439518451690674,
+        "top_k": [
+          {
+            "label": "pawn",
+            "confidence": 0.44439518451690674
+          },
+          {
+            "label": "queen",
+            "confidence": 0.3754212260246277
+          },
+          {
+            "label": "rook",
+            "confidence": 0.12197267264127731
+          }
+        ]
+      },
+      "color": {
+        "label": "black",
+        "confidence": 0.9385796189308167,
+        "top_k": [
+          {
+            "label": "black",
+            "confidence": 0.9385796189308167
+          },
+          {
+            "label": "white",
+            "confidence": 0.06142042577266693
+          }
+        ]
+      }
+    },
+    {
+      "index": 62,
+      "id": "g1",
+      "box": {
+        "x1": 924,
+        "y1": 696,
+        "x2": 1019,
+        "y2": 791
+      },
+      "type": {
+        "label": "queen",
+        "confidence": 0.3817683756351471,
+        "top_k": [
+          {
+            "label": "queen",
+            "confidence": 0.3817683756351471
+          },
+          {
+            "label": "rook",
+            "confidence": 0.33233052492141724
+          },
+          {
+            "label": "pawn",
+            "confidence": 0.19588111340999603
+          }
+        ]
+      },
+      "color": {
+        "label": "white",
+        "confidence": 0.9964085221290588,
+        "top_k": [
+          {
+            "label": "white",
+            "confidence": 0.9964085221290588
+          },
+          {
+            "label": "black",
+            "confidence": 0.0035914690233767033
+          }
+        ]
+      }
+    },
+    {
+      "index": 63,
+      "id": "h1",
+      "box": {
+        "x1": 1019,
+        "y1": 696,
+        "x2": 1114,
+        "y2": 791
+      },
+      "type": {
+        "label": "queen",
+        "confidence": 0.3826398253440857,
+        "top_k": [
+          {
+            "label": "queen",
+            "confidence": 0.3826398253440857
+          },
+          {
+            "label": "rook",
+            "confidence": 0.28140896558761597
+          },
+          {
+            "label": "knight",
+            "confidence": 0.2500230073928833
+          }
+        ]
+      },
+      "color": {
+        "label": "black",
+        "confidence": 0.9996439218521118,
+        "top_k": [
+          {
+            "label": "black",
+            "confidence": 0.9996439218521118
+          },
+          {
+            "label": "white",
+            "confidence": 0.0003560679033398628
+          }
+        ]
+      }
+    }
+  ]
+}

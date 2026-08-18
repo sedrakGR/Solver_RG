@@ -1,0 +1,455 @@
+{
+  "board_size": 512,
+  "image": "data/raw/ChessRender360/sample.png",
+  "num_squares": 64,
+  "predictions": [
+    {
+      "color": 0,
+      "confidence": 0.9678,
+      "type": "none",
+      "x": 1,
+      "y": 1
+    },
+    {
+      "color": 0,
+      "confidence": 0.873,
+      "type": "none",
+      "x": 2,
+      "y": 1
+    },
+    {
+      "color": 1,
+      "confidence": 0.7668,
+      "type": "pawn",
+      "x": 3,
+      "y": 1
+    },
+    {
+      "color": 0,
+      "confidence": 0.9739,
+      "type": "none",
+      "x": 4,
+      "y": 1
+    },
+    {
+      "color": 0,
+      "confidence": 0.985,
+      "type": "none",
+      "x": 5,
+      "y": 1
+    },
+    {
+      "color": 0,
+      "confidence": 0.985,
+      "type": "none",
+      "x": 6,
+      "y": 1
+    },
+    {
+      "color": 0,
+      "confidence": 0.9809,
+      "type": "none",
+      "x": 7,
+      "y": 1
+    },
+    {
+      "color": 0,
+      "confidence": 0.985,
+      "type": "none",
+      "x": 8,
+      "y": 1
+    },
+    {
+      "color": 1,
+      "confidence": 0.7883,
+      "type": "pawn",
+      "x": 1,
+      "y": 2
+    },
+    {
+      "color": 1,
+      "confidence": 0.7881,
+      "type": "rook",
+      "x": 2,
+      "y": 2
+    },
+    {
+      "color": 1,
+      "confidence": 0.7601,
+      "type": "king",
+      "x": 3,
+      "y": 2
+    },
+    {
+      "color": 1,
+      "confidence": 0.7819,
+      "type": "pawn",
+      "x": 4,
+      "y": 2
+    },
+    {
+      "color": 2,
+      "confidence": 0.7507,
+      "type": "pawn",
+      "x": 5,
+      "y": 2
+    },
+    {
+      "color": 1,
+      "confidence": 0.7336,
+      "type": "queen",
+      "x": 6,
+      "y": 2
+    },
+    {
+      "color": 1,
+      "confidence": 0.7088,
+      "type": "king",
+      "x": 7,
+      "y": 2
+    },
+    {
+      "color": 2,
+      "confidence": 0.7344,
+      "type": "pawn",
+      "x": 8,
+      "y": 2
+    },
+    {
+      "color": 1,
+      "confidence": 0.7734,
+      "type": "pawn",
+      "x": 1,
+      "y": 3
+    },
+    {
+      "color": 1,
+      "confidence": 0.7558,
+      "type": "queen",
+      "x": 2,
+      "y": 3
+    },
+    {
+      "color": 2,
+      "confidence": 0.6868,
+      "type": "king",
+      "x": 3,
+      "y": 3
+    },
+    {
+      "color": 1,
+      "confidence": 0.7339,
+      "type": "king",
+      "x": 4,
+      "y": 3
+    },
+    {
+      "color": 0,
+      "confidence": 0.9007,
+      "type": "none",
+      "x": 5,
+      "y": 3
+    },
+    {
+      "color": 1,
+      "confidence": 0.6982,
+      "type": "pawn",
+      "x": 6,
+      "y": 3
+    },
+    {
+      "color": 1,
+      "confidence": 0.7218,
+      "type": "pawn",
+      "x": 7,
+      "y": 3
+    },
+    {
+      "color": 2,
+      "confidence": 0.7508,
+      "type": "pawn",
+      "x": 8,
+      "y": 3
+    },
+    {
+      "color": 1,
+      "confidence": 0.7669,
+      "type": "pawn",
+      "x": 1,
+      "y": 4
+    },
+    {
+      "color": 1,
+      "confidence": 0.7223,
+      "type": "pawn",
+      "x": 2,
+      "y": 4
+    },
+    {
+      "color": 0,
+      "confidence": 0.8537,
+      "type": "none",
+      "x": 3,
+      "y": 4
+    },
+    {
+      "color": 1,
+      "confidence": 0.7634,
+      "type": "pawn",
+      "x": 4,
+      "y": 4
+    },
+    {
+      "color": 0,
+      "confidence": 0.985,
+      "type": "none",
+      "x": 5,
+      "y": 4
+    },
+    {
+      "color": 2,
+      "confidence": 0.763,
+      "type": "pawn",
+      "x": 6,
+      "y": 4
+    },
+    {
+      "color": 0,
+      "confidence": 0.9833,
+      "type": "none",
+      "x": 7,
+      "y": 4
+    },
+    {
+      "color": 0,
+      "confidence": 0.985,
+      "type": "none",
+      "x": 8,
+      "y": 4
+    },
+    {
+      "color": 0,
+      "confidence": 0.985,
+      "type": "none",
+      "x": 1,
+      "y": 5
+    },
+    {
+      "color": 0,
+      "confidence": 0.985,
+      "type": "none",
+      "x": 2,
+      "y": 5
+    },
+    {
+      "color": 0,
+      "confidence": 0.9809,
+      "type": "none",
+      "x": 3,
+      "y": 5
+    },
+    {
+      "color": 0,
+      "confidence": 0.985,
+      "type": "none",
+      "x": 4,
+      "y": 5
+    },
+    {
+      "color": 0,
+      "confidence": 0.985,
+      "type": "none",
+      "x": 5,
+      "y": 5
+    },
+    {
+      "color": 0,
+      "confidence": 0.8034,
+      "type": "none",
+      "x": 6,
+      "y": 5
+    },
+    {
+      "color": 1,
+      "confidence": 0.78,
+      "type": "pawn",
+      "x": 7,
+      "y": 5
+    },
+    {
+      "color": 0,
+      "confidence": 0.9348,
+      "type": "none",
+      "x": 8,
+      "y": 5
+    },
+    {
+      "color": 2,
+      "confidence": 0.7498,
+      "type": "pawn",
+      "x": 1,
+      "y": 6
+    },
+    {
+      "color": 1,
+      "confidence": 0.7086,
+      "type": "king",
+      "x": 2,
+      "y": 6
+    },
+    {
+      "color": 0,
+      "confidence": 0.8354,
+      "type": "none",
+      "x": 3,
+      "y": 6
+    },
+    {
+      "color": 2,
+      "confidence": 0.7714,
+      "type": "king",
+      "x": 4,
+      "y": 6
+    },
+    {
+      "color": 0,
+      "confidence": 0.8419,
+      "type": "none",
+      "x": 5,
+      "y": 6
+    },
+    {
+      "color": 0,
+      "confidence": 0.8985,
+      "type": "none",
+      "x": 6,
+      "y": 6
+    },
+    {
+      "color": 0,
+      "confidence": 0.8898,
+      "type": "none",
+      "x": 7,
+      "y": 6
+    },
+    {
+      "color": 0,
+      "confidence": 0.8889,
+      "type": "none",
+      "x": 8,
+      "y": 6
+    },
+    {
+      "color": 0,
+      "confidence": 0.9007,
+      "type": "none",
+      "x": 1,
+      "y": 7
+    },
+    {
+      "color": 1,
+      "confidence": 0.7285,
+      "type": "pawn",
+      "x": 2,
+      "y": 7
+    },
+    {
+      "color": 1,
+      "confidence": 0.7233,
+      "type": "knight",
+      "x": 3,
+      "y": 7
+    },
+    {
+      "color": 2,
+      "confidence": 0.7507,
+      "type": "pawn",
+      "x": 4,
+      "y": 7
+    },
+    {
+      "color": 0,
+      "confidence": 0.9434,
+      "type": "none",
+      "x": 5,
+      "y": 7
+    },
+    {
+      "color": 0,
+      "confidence": 0.9155,
+      "type": "none",
+      "x": 6,
+      "y": 7
+    },
+    {
+      "color": 0,
+      "confidence": 0.9648,
+      "type": "none",
+      "x": 7,
+      "y": 7
+    },
+    {
+      "color": 0,
+      "confidence": 0.9523,
+      "type": "none",
+      "x": 8,
+      "y": 7
+    },
+    {
+      "color": 0,
+      "confidence": 0.985,
+      "type": "none",
+      "x": 1,
+      "y": 8
+    },
+    {
+      "color": 2,
+      "confidence": 0.763,
+      "type": "pawn",
+      "x": 2,
+      "y": 8
+    },
+    {
+      "color": 0,
+      "confidence": 0.9833,
+      "type": "none",
+      "x": 3,
+      "y": 8
+    },
+    {
+      "color": 0,
+      "confidence": 0.985,
+      "type": "none",
+      "x": 4,
+      "y": 8
+    },
+    {
+      "color": 0,
+      "confidence": 0.9689,
+      "type": "none",
+      "x": 5,
+      "y": 8
+    },
+    {
+      "color": 0,
+      "confidence": 0.9763,
+      "type": "none",
+      "x": 6,
+      "y": 8
+    },
+    {
+      "color": 0,
+      "confidence": 0.9772,
+      "type": "none",
+      "x": 7,
+      "y": 8
+    },
+    {
+      "color": 1,
+      "confidence": 0.7006,
+      "type": "king",
+      "x": 8,
+      "y": 8
+    }
+  ]
+}

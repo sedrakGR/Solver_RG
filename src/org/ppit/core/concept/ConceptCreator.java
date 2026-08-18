@@ -125,6 +125,38 @@ public class ConceptCreator {
 		return lookupVocabulary(classifierId, null);
 	}
 
+	/**
+	 * Best-effort match of a value-attribute's symbol string to a registered
+	 * categorical vocabulary by checking whether every token is a known class
+	 * name in exactly one vocabulary. Returns null on no-match or ambiguity.
+	 */
+	private Vocabulary inferVocabularyFromValueTokens(String value) {
+		if (value == null || value.isEmpty()) return null;
+		String[] tokens = value.split(",");
+		java.util.ArrayList<String> cleaned = new java.util.ArrayList<String>();
+		for (String t : tokens) {
+			String s = t.trim();
+			if (s.length() > 0 && s.charAt(0) == '"') s = s.substring(1);
+			if (s.length() > 0 && s.charAt(s.length() - 1) == '"') s = s.substring(0, s.length() - 1);
+			if (s.length() > 0 && s.charAt(0) == '[') s = s.substring(1);
+			if (s.length() > 0 && s.charAt(s.length() - 1) == ']') s = s.substring(0, s.length() - 1);
+			if (!s.isEmpty()) cleaned.add(s.trim());
+		}
+		if (cleaned.isEmpty()) return null;
+
+		Vocabulary match = null;
+		int matchCount = 0;
+		for (Vocabulary v : VocabularyRegistry.getInstance().listAll()) {
+			if (v.getKind() != Vocabulary.Kind.CATEGORICAL) continue;
+			boolean allFit = true;
+			for (String tok : cleaned) {
+				if (!v.hasName(tok)) { allFit = false; break; }
+			}
+			if (allFit) { match = v; matchCount++; }
+		}
+		return matchCount == 1 ? match : null;
+	}
+
 	private Vocabulary lookupVocabulary(String classifierId, String contextHint) {
 		if (classifierId == null || classifierId.isEmpty()) return null;
 		VocabularyRegistry reg = VocabularyRegistry.getInstance();
@@ -240,6 +272,27 @@ public class ConceptCreator {
 		Vocabulary ruleVocab = resolveVocabularyFromAttribute(conceptAttribute);
 		if (ruleVocab == null && primConcept.getType() != null && primConcept.getType().hasVocabulary()) {
 			ruleVocab = primConcept.getType().getVocabulary();
+		}
+		// Last-resort rescue for legacy data: saved primitives written before the
+		// classifier field was persisted (pre-DBPrimitiveManager fix) will land
+		// here with operator=IS and ruleVocab=null. Try to infer the vocabulary
+		// by matching the value tokens against every registered vocabulary's
+		// classNames. Used only when an explicit classifier was not stored.
+		if (ruleVocab == null
+				&& (operator.equals(Definitions.isOperator) || operator.equals(Definitions.notIsOperator))) {
+			ruleVocab = inferVocabularyFromValueTokens(attributeValue);
+			if (ruleVocab != null) {
+				Logger.getInstance().log(Logger.INFO,
+						"ConceptCreator: inferred classifier '" + ruleVocab.getId()
+								+ "' for legacy IS attribute on '" + conceptName
+								+ "' (value='" + attributeValue + "'). Re-save the concept "
+								+ "to make this binding explicit.");
+				// Also bind it onto the type so derived primitives of this nucleus
+				// inherit cleanly without re-running inference.
+				if (primConcept.getType() != null && !primConcept.getType().hasVocabulary()) {
+					primConcept.getType().setVocabulary(ruleVocab);
+				}
+			}
 		}
 
 		IRule rule = createRule(attributeValue, operator, ruleVocab);

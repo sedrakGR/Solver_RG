@@ -1,0 +1,45 @@
+"""Utility helpers."""
+
+from __future__ import annotations
+
+import json
+from pathlib import Path
+from typing import Any, Iterable
+
+
+def ensure_parent(path: Path) -> None:
+    path.parent.mkdir(parents=True, exist_ok=True)
+
+
+def load_json(path: Path) -> Any:
+    with path.open("r", encoding="utf-8") as handle:
+        return json.load(handle)
+
+
+def save_json(path: Path, payload: Any) -> None:
+    ensure_parent(path)
+    with path.open("w", encoding="utf-8") as handle:
+        json.dump(payload, handle, indent=2, sort_keys=True)
+
+
+def mean(values: Iterable[float]) -> float:
+    values_list = list(values)
+    if not values_list:
+        return 0.0
+    return sum(values_list) / len(values_list)
+
+
+def std(values: Iterable[float]) -> float:
+    values_list = list(values)
+    if not values_list:
+        return 0.0
+    center = mean(values_list)
+    return (sum((value - center) ** 2 for value in values_list) / len(values_list)) ** 0.5
+
+
+def clamp(value: float, lower: float, upper: float) -> float:
+    if value < lower:
+        return lower
+    if value > upper:
+        return upper
+    return value

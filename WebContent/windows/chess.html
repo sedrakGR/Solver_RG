@@ -58,4 +58,30 @@
 	<div id="message">
 		<span style="margin:7px;margin-top:7px;margin-left:7px;color:black;">For removeing figure from the board</br> doubleclick on it.</span>
 	</div>
+
+	<!-- ============================================================
+	     Image-to-Situation: upload a chess-board photo / render and
+	     let the NN classifiers (type + color) plus a brightness-based
+	     occupancy heuristic reconstruct the Situation. The resulting
+	     IdGroups feed the existing matching/planning pipeline.
+	     ============================================================ -->
+	<div id="imgSituationPanel"
+	     style="margin:12px; padding:10px; background:#f4f7fb; border:1px solid #b6cfe6; border-radius:4px; max-width:680px; color:#0a3b6e;">
+		<div style="font-weight:bold; font-size:13px; margin-bottom:6px;">
+			Build Situation from Image
+		</div>
+		<div style="font-size:11px; color:#444; margin-bottom:6px;">
+			Pick a chess-board image — the NN classifiers fill the 64 cells, an empty-square
+			heuristic skips blanks, and the result is committed as a new Situation that the
+			existing matching/planning pipeline can run against.
+		</div>
+		<div style="display:flex; gap:6px; align-items:center; flex-wrap:wrap;">
+			<input type="file" id="imgSitFile" accept="image/*" />
+			<input type="text"  id="imgSitName" placeholder="Situation name (optional)" style="width:180px;" />
+			<button type="button" id="imgSitGo" style="padding:4px 10px;">Process Image</button>
+			<span id="imgSitStatus" style="font-size:11px; color:#0a3b6e;"></span>
+		</div>
+		<pre id="imgSitResult"
+		     style="margin-top:8px; padding:8px; background:#fff; color:#111; border:1px solid #ccc; max-height:240px; overflow:auto; font-size:11px; display:none;"></pre>
+	</div>
 </div>

@@ -1,0 +1,15 @@
+# Dev overlay: run the prebuilt image against the CURRENT working tree.
+#
+# The baked image lags the source tree, so mount the pieces that matter:
+#   - classifiers/            NN manifests (drop folder, re-read on restart)
+#   - Solver_train/*.py       predict_board.py + helpers (contains fixes not in the image)
+#   - Solver_train/artifacts/ the trained .pt checkpoints (image does not ship them)
+#
+# Usage:  ./run-solver.sh      (wraps this file and also syncs the web assets)
+services:
+  app:
+    volumes:
+      - ./classifiers:/opt/solver/classifiers:ro
+      - ./Solver_train/predict_board.py:/opt/solver/Solver_train/predict_board.py:ro
+      - ./Solver_train/chess_piece_classifier.py:/opt/solver/Solver_train/chess_piece_classifier.py:ro
+      - ./Solver_train/artifacts:/opt/solver/Solver_train/artifacts:ro

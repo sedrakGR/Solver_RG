@@ -96,8 +96,17 @@ public class DBPrimitiveManager {
 		// rule of the attribute
 		IRule primitiveConceptRule = primitiveConcept.getRule();
 		//operator
-		String operator = primitiveConceptRule.getOperator();	
+		String operator = primitiveConceptRule.getOperator();
 		valueAttrContent.put("oper", operator);
+		// IS / NOT IS carry a classifier vocabulary binding; persist its id
+		// so the rule can be reconstructed at load time.
+		if (primitiveConceptRule instanceof org.ppit.core.concept.rules.RuleIs) {
+			org.ppit.core.concept.primitive.Vocabulary v =
+				((org.ppit.core.concept.rules.RuleIs) primitiveConceptRule).getVocabulary();
+			if (v != null) {
+				valueAttrContent.put("classifier", v.getId());
+			}
+		}
 		if (operator.equals("IN")) {
 			BasicDBObject operValues = new BasicDBObject();
 			String s;
